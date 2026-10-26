@@ -1,2 +1,2 @@
 # AayinChoi.github.io
-Aayin Choi | Aerospace Engineering Project Portfolio
+Aerospace Engineering Project Portfolio
