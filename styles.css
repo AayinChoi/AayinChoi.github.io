@@ -215,7 +215,7 @@ a { color: inherit; }
   margin: auto 0;
 }
 
-.portfolio-panel-copy > p:first-child {
+.portfolio-panel-role {
   margin-bottom: 12px;
   color: var(--gold);
   font-size: 0.66rem;
@@ -224,20 +224,49 @@ a { color: inherit; }
   text-transform: uppercase;
 }
 
-.portfolio-panel-copy h2 {
-  max-width: 420px;
-  margin: 0 0 18px;
-  color: var(--ink);
-  font-size: clamp(2.15rem, 3.6vw, 3.05rem);
-  line-height: 0.96;
+.portfolio-panel-name {
+  max-width: 500px;
+  margin: 0 0 25px;
+  color: var(--navy-deep);
+  font-size: clamp(2.7rem, 4.4vw, 4rem);
+  line-height: 0.9;
+  letter-spacing: -0.065em;
 }
 
-.portfolio-panel-copy > p:last-child {
+.portfolio-panel-name span:last-child { color: var(--navy-soft); }
+
+.portfolio-panel-affiliation {
+  position: relative;
+  display: grid;
+  gap: 2px;
   max-width: 430px;
-  margin-bottom: 0;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--navy-soft);
+}
+
+.portfolio-panel-affiliation::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  bottom: 3px;
+  width: 3px;
+  border-radius: 999px;
+  background: var(--gold);
+}
+
+.portfolio-panel-affiliation strong {
+  color: var(--navy-deep);
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.portfolio-panel-affiliation span {
   color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.65;
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: 0.015em;
 }
 
 .portfolio-panel-footer {
