@@ -227,13 +227,13 @@ a { color: inherit; }
 .portfolio-panel-name {
   max-width: 500px;
   margin: 0 0 25px;
-  color: var(--navy-deep);
+  color: #343a72;
   font-size: clamp(2.7rem, 4.4vw, 4rem);
   line-height: 0.9;
   letter-spacing: -0.065em;
 }
 
-.portfolio-panel-name span:last-child { color: var(--navy-soft); }
+.portfolio-panel-name span:last-child { color: #8a6d24; }
 
 .portfolio-panel-affiliation {
   position: relative;
