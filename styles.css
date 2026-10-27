@@ -554,7 +554,7 @@ h3 { font-size: clamp(1.35rem, 2.2vw, 2rem); }
 }
 
 .case-proof-primary strong .case-proof-hash {
-  color: var(--ink);
+  color: var(--gold);
   font-size: 1em;
   letter-spacing: inherit;
 }
