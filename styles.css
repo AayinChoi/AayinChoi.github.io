@@ -169,89 +169,120 @@ a { color: inherit; }
 }
 
 .portfolio-intro-panel {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 418px;
   padding: clamp(30px, 4vw, 48px);
+  overflow: hidden;
+  border: 1px solid rgba(23,25,31,0.09);
   border-radius: 20px;
-  background: linear-gradient(145deg, var(--navy-deep), #292d63);
-  color: var(--white);
-  box-shadow: 0 24px 46px rgba(25,28,62,0.18);
+  background: linear-gradient(145deg, #ebe6dc, #e1dbcf);
+  color: var(--ink);
+}
+
+.portfolio-intro-panel::after {
+  content: "02";
+  position: absolute;
+  right: -18px;
+  bottom: -82px;
+  color: rgba(155,118,0,0.075);
+  font-size: 14rem;
+  font-weight: 850;
+  line-height: 1;
+  letter-spacing: -0.09em;
 }
 
 .portfolio-panel-topline {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  color: rgba(255,255,255,0.62);
+  color: var(--muted);
   font-size: 0.66rem;
   font-weight: 850;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.portfolio-panel-topline strong { color: #d2b451; }
+.portfolio-panel-topline strong { color: var(--gold); }
 
-.portfolio-intro-panel h2 {
-  margin: 50px 0 18px;
-  color: var(--white);
-  font-size: clamp(2rem, 3.3vw, 2.75rem);
-  line-height: 0.98;
+.portfolio-panel-copy {
+  position: relative;
+  z-index: 1;
+  margin: auto 0;
 }
 
-.portfolio-intro-panel > p {
-  margin-bottom: 30px;
-  color: rgba(255,255,255,0.68);
-  font-size: 0.91rem;
-  line-height: 1.65;
-}
-
-.portfolio-panel-matrix {
-  margin: auto 0 26px;
-}
-
-.portfolio-panel-matrix div {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 14px;
-  padding: 10px 0;
-  border-top: 1px solid rgba(255,255,255,0.16);
-}
-
-.portfolio-panel-matrix dt {
-  color: #d2b451;
-  font-size: 0.62rem;
+.portfolio-panel-copy > p:first-child {
+  margin-bottom: 12px;
+  color: var(--gold);
+  font-size: 0.66rem;
   font-weight: 850;
   letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
-.portfolio-panel-matrix dd {
-  margin: 0;
-  color: rgba(255,255,255,0.82);
-  font-size: 0.72rem;
-  font-weight: 650;
+.portfolio-panel-copy h2 {
+  max-width: 420px;
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-size: clamp(2.15rem, 3.6vw, 3.05rem);
+  line-height: 0.96;
 }
 
-.portfolio-intro-panel > a {
+.portfolio-panel-copy > p:last-child {
+  max-width: 430px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.portfolio-panel-footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(23,25,31,0.14);
+}
+
+.portfolio-panel-footer > div { display: grid; gap: 2px; }
+
+.portfolio-panel-footer > div strong {
+  color: var(--navy-deep);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.portfolio-panel-footer > div span {
+  color: var(--muted);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.portfolio-panel-footer > a {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 17px;
-  border-top: 1px solid rgba(255,255,255,0.24);
-  color: var(--white);
+  gap: 10px;
+  color: var(--ink);
   text-decoration: none;
   font-size: 0.82rem;
   font-weight: 800;
 }
 
-.portfolio-intro-panel > a span {
+.portfolio-panel-footer > a span {
   display: grid;
   place-items: center;
   width: 30px;
   aspect-ratio: 1;
-  border: 1px solid rgba(255,255,255,0.32);
+  border: 1px solid rgba(23,25,31,0.24);
   border-radius: 50%;
 }
 
@@ -950,8 +981,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .portfolio-intro h1 { margin-top: 56px; padding-top: 0; font-size: clamp(2.65rem, 14vw, 3.5rem); }
   .portfolio-disciplines { display: grid; grid-template-columns: 1fr 1fr; margin-top: 36px; }
   .portfolio-disciplines span { text-align: center; }
-  .portfolio-intro-panel h2 { margin-top: 54px; }
-  .portfolio-panel-matrix div { grid-template-columns: 62px 1fr; }
+  .portfolio-panel-copy { margin-block: 56px; }
   .project-index { padding-block: 28px 76px; }
   .index-card { grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 0; padding: 14px 18px 22px; border-radius: 20px; }
   .index-number { padding-top: 0; }
