@@ -6,6 +6,7 @@
   --navy: #252856;
   --navy-deep: #191c3e;
   --navy-soft: #3d3f73;
+  --scope-accent: #59628f;
   --gold: #9b7600;
   --line: rgba(23, 25, 31, 0.16);
   --white: #fff;
@@ -422,11 +423,17 @@ h3 { font-size: clamp(1.35rem, 2.2vw, 2rem); }
 }
 
 .case-spotlight-copy h1 {
-  max-width: 670px;
+  max-width: 640px;
   margin-bottom: 24px;
-  font-size: clamp(2.85rem, 4vw, 4.65rem);
-  line-height: 0.98;
-  letter-spacing: -0.052em;
+  font-size: clamp(2.7rem, 3.45vw, 3.95rem);
+  font-weight: 720;
+  line-height: 1.01;
+  letter-spacing: -0.043em;
+  text-wrap: balance;
+}
+
+.case-title-line {
+  display: block;
 }
 
 .case-summary {
@@ -544,6 +551,17 @@ h3 { font-size: clamp(1.35rem, 2.2vw, 2rem); }
   color: var(--navy-deep);
   font-size: 0.55em;
   letter-spacing: -0.02em;
+}
+
+.case-proof-primary strong .case-proof-hash {
+  color: var(--ink);
+  font-size: 1em;
+  letter-spacing: inherit;
+}
+
+.case-proof strong .case-proof-scope-number {
+  display: inline;
+  color: var(--scope-accent);
 }
 
 .case-proof small {
@@ -795,7 +813,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .case-topline { align-items: flex-start; flex-direction: column; gap: 8px; }
   .case-spotlight { padding-block: 26px 54px; }
   .case-spotlight-grid { gap: 28px; }
-  .case-spotlight-copy h1 { font-size: clamp(2.55rem, 12vw, 3.8rem); }
+  .case-spotlight-copy h1 { font-size: clamp(2.35rem, 10.5vw, 3.25rem); }
   .case-spotlight-visual { aspect-ratio: 1.15 / 1; }
   .case-proof { grid-template-columns: 1fr 1fr; }
   .case-proof > div { min-height: 108px; padding: 19px 18px; }
