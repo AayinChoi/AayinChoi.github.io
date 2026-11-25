@@ -345,12 +345,19 @@ a { color: inherit; }
   min-height: 44px;
   padding: 0 18px;
   border-radius: 8px;
-  border-color: rgba(25,28,62,0.28);
-  color: var(--navy-deep);
+  border-color: #8a6d24;
+  background: #8a6d24;
+  color: var(--white);
+}
+
+.resume-section .resume-open:hover,
+.resume-section .resume-open:focus-visible {
+  border-color: #755b1c;
+  background: #755b1c;
 }
 
 .resume-section .resume-open:focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--navy-deep);
   outline-offset: 4px;
 }
 
