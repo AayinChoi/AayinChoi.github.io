@@ -76,6 +76,8 @@ a { color: inherit; }
 }
 .site-nav a:hover, .site-nav a:focus-visible { color: var(--navy); }
 
+.site-nav .nav-resume { display: none; }
+
 .portfolio-intro {
   position: relative;
   display: grid;
@@ -168,11 +170,35 @@ a { color: inherit; }
   text-transform: uppercase;
 }
 
-.portfolio-resume-link {
-  position: relative;
-  z-index: 1;
-  margin-top: 24px;
-  font-size: 1rem;
+.portfolio-intro-panel .portfolio-resume-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  min-height: 64px;
+  margin-top: 28px;
+  padding: 16px 22px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  font-size: 1.05rem;
+}
+
+.portfolio-resume-link strong {
+  font-weight: 750;
+}
+
+.portfolio-resume-link span {
+  padding: 3px 9px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+}
+
+.portfolio-intro-panel .portfolio-resume-link:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
 }
 
 .portfolio-intro-panel {
@@ -1829,6 +1855,20 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 .footer-inner a { text-decoration: none; font-weight: 750; }
 
 @media (max-width: 900px) {
+  .site-nav { align-items: center; }
+  .site-nav .nav-resume {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 16px;
+    border-radius: 9px;
+    background: var(--navy-deep);
+    color: var(--white);
+    font-weight: 750;
+  }
+  .site-nav .nav-resume:hover,
+  .site-nav .nav-resume:focus-visible { background: var(--navy); color: var(--white); }
+  .site-nav .nav-resume:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
   .portfolio-intro { grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
   .portfolio-intro-main,
   .portfolio-intro-panel { min-height: 380px; }
@@ -1905,6 +1945,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .site-header { min-height: 72px; }
   .site-nav { gap: 14px; }
   .site-nav a:first-child { display: none; }
+  .site-nav .nav-portfolio { display: none; }
   .portfolio-intro { margin-top: 18px; padding: 9px; border-radius: 20px; }
   .portfolio-intro-main,
   .portfolio-intro-panel { min-height: 0; padding: 28px 24px; border-radius: 15px; }
