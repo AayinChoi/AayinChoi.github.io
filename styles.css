@@ -345,15 +345,15 @@ a { color: inherit; }
   min-height: 44px;
   padding: 0 18px;
   border-radius: 8px;
-  border-color: #8a6d24;
-  background: #8a6d24;
+  border-color: var(--navy-deep);
+  background: var(--navy-deep);
   color: var(--white);
 }
 
 .resume-section .resume-open:hover,
 .resume-section .resume-open:focus-visible {
-  border-color: #755b1c;
-  background: #755b1c;
+  border-color: var(--navy);
+  background: var(--navy);
 }
 
 .resume-section .resume-open:focus-visible {
