@@ -171,29 +171,15 @@ a { color: inherit; }
 }
 
 .portfolio-intro-panel .portfolio-resume-link {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  width: 100%;
-  min-height: 64px;
-  margin-top: 28px;
-  padding: 16px 22px;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 12px;
-  font-size: 1.05rem;
-}
-
-.portfolio-resume-link strong {
-  font-weight: 750;
-}
-
-.portfolio-resume-link span {
-  padding: 3px 9px;
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 5px;
-  font-size: 0.75rem;
-  font-weight: 650;
-  letter-spacing: 0.06em;
+  display: inline-flex;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 22px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 8px;
+  font-size: 0.94rem;
+  box-shadow: none;
 }
 
 .portfolio-intro-panel .portfolio-resume-link:focus-visible {
