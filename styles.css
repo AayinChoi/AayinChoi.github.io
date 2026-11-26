@@ -195,7 +195,7 @@ a { color: inherit; }
   column-gap: 16px;
   row-gap: 26px;
   margin-top: 30px;
-  padding: 28px 16px;
+  padding: 40px 16px;
   border: 1px solid var(--line);
   border-radius: 20px;
   background:
@@ -215,8 +215,9 @@ a { color: inherit; }
 .personal-school {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-top: 14px;
+  gap: 18px;
+  margin-top: 22px;
+  padding-block: 4px;
 }
 .personal-school > img { flex: 0 0 40px; width: 40px; height: auto; }
 .personal-school .personal-affiliation { min-width: 0; margin: 0; }
@@ -1983,6 +1984,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-secondary-marks {
+  --recognition-mark-height: clamp(25px, 2.7vw, 34.5px);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1990,13 +1992,18 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   padding-top: 24px;
   border-top: 1px solid rgba(25,28,62,0.12);
 }
-.profile-nscs-mark {
+.profile-nscs-mark,
+.profile-dsc-mark {
   display: block;
-  flex: 0 0 170px;
-  width: 170px;
-  height: auto;
+  flex: 0 0 auto;
+  width: auto;
+  height: var(--recognition-mark-height);
+  max-width: 100%;
+  object-fit: contain;
 }
-.profile-dsc-mark { display: block; width: 160px; height: auto; }
+
+/* The DSC source has transparent margins: 550 visible pixels within a 750px canvas. */
+.profile-dsc-mark { height: calc(var(--recognition-mark-height) * 1.363636); }
 
 .profile-records {
   display: grid;
@@ -2302,8 +2309,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .profile-institutions { gap: 20px; padding: 24px 0 0; border-left: 0; border-top: 1px solid rgba(25,28,62,0.15); }
   .profile-secondary-marks { gap: 20px; padding-top: 0; border-top: 0; }
   .profile-affiliation-wordmark { flex-basis: 194px; width: 194px; height: 33px; }
-  .profile-nscs-mark { flex-basis: 146px; width: 146px; }
-  .profile-dsc-mark { width: 138px; }
+  .profile-secondary-marks { --recognition-mark-height: 25px; }
   .profile-records {
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;
@@ -2436,7 +2442,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .portfolio-intro h1 { margin-top: 56px; padding-top: 0; font-size: clamp(2.65rem, 14vw, 3.5rem); }
   .portfolio-disciplines { display: grid; grid-template-columns: 1fr 1fr; margin-top: 36px; }
   .portfolio-disciplines span { text-align: center; }
-  .personal-intro { grid-template-columns: 1fr; gap: 24px; margin-top: 18px; padding: 26px 9px; }
+  .personal-intro { grid-template-columns: 1fr; gap: 28px; margin-top: 18px; padding: 32px 9px; }
   .personal-identity, .personal-summary { padding-inline: 24px; }
   .personal-links { gap: 12px 20px; }
   .project-directory a { padding-block: 16px; }
