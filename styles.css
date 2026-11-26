@@ -1898,6 +1898,15 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   height: auto;
 }
 
+.profile-affiliation-wordmark {
+  display: block;
+  width: 194px;
+  height: 33px;
+  background-color: var(--navy-deep);
+  -webkit-mask: url("erau-wordmark.svg") center / contain no-repeat;
+  mask: url("erau-wordmark.svg") center / contain no-repeat;
+}
+
 .profile-heading::after {
   content: "";
   flex: 1;
