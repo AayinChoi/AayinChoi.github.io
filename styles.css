@@ -1922,7 +1922,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  min-height: 28px;
+  min-height: 34px;
 }
 
 .profile-milestone-title h3 {
@@ -1934,10 +1934,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 
 .profile-milestone-main {
   display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
-  align-items: center;
-  gap: 18px;
-  min-height: 62px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 6px;
   margin-top: 8px;
 }
 
@@ -1951,11 +1949,12 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 
 .profile-milestone-score {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  gap: 8px;
   margin: 0;
-  font-size: 3rem;
+  white-space: nowrap;
+  font-size: 2.6rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   line-height: 1;
@@ -1963,7 +1962,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-score span {
-  font-size: 0.875rem;
+  flex: 0 0 auto;
+  font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0;
@@ -2136,7 +2136,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
     font-size: 2.6rem;
   }
   .profile-milestone-main {
-    gap: 14px;
+    gap: 6px;
   }
   .profile-record {
     grid-column: auto;
