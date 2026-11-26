@@ -1879,6 +1879,25 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   border-top: 1px solid var(--line);
 }
 
+.profile-affiliation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+  padding-right: 26px;
+  border-right: 1px solid var(--line);
+  color: var(--navy-deep);
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.profile-affiliation img {
+  display: block;
+  width: 44px;
+  height: auto;
+}
+
 .profile-heading::after {
   content: "";
   flex: 1;
@@ -2007,12 +2026,39 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-catia {
-  border-color: #bccbd6;
+  border-color: #afc0cc;
   background:
-    linear-gradient(rgba(42,83,115,0.06) 1px, transparent 1px) 0 0 / 24px 24px,
-    linear-gradient(90deg, rgba(42,83,115,0.06) 1px, transparent 1px) 0 0 / 24px 24px,
-    linear-gradient(120deg, #f0f5f8, #e4edf3);
-  color: #244b69;
+    linear-gradient(135deg, rgba(255,255,255,0.92), transparent 65%),
+    linear-gradient(115deg, #edf2f5, #dbe5ec);
+  box-shadow: 0 8px 24px rgba(36,75,105,0.08), inset 0 1px 0 #fff;
+  color: #193e5b;
+}
+
+.profile-milestone-catia::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, #245b81, #8caec5);
+}
+
+.profile-milestone-catia::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  top: 54px;
+  width: 160px;
+  height: 190px;
+  background: linear-gradient(140deg, rgba(82,119,147,0.10), rgba(82,119,147,0));
+  clip-path: polygon(68% 0, 100% 0, 32% 100%, 0 100%);
+  pointer-events: none;
+}
+
+.profile-milestone-catia > * {
+  position: relative;
+  z-index: 1;
 }
 
 .profile-milestone-catia .profile-standing {
@@ -2021,8 +2067,11 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   min-width: 44px;
   min-height: 34px;
   padding: 2px 8px;
-  border: 1px solid #6387a2;
+  border: 1px solid #274e6b;
   border-radius: 4px;
+  background: #244b69;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
+  color: #fff;
   font-size: 1.45rem;
 }
 
@@ -2120,9 +2169,18 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
     padding-bottom: 48px;
   }
   .profile-heading {
+    flex-wrap: wrap;
     gap: 16px;
     margin-bottom: 22px;
     padding-top: 22px;
+  }
+  .profile-affiliation {
+    width: 100%;
+    padding-right: 0;
+    border-right: 0;
+  }
+  .profile-heading::after {
+    display: none;
   }
   .profile-records {
     grid-template-columns: minmax(0, 1fr);
