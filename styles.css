@@ -2018,7 +2018,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   grid-column: span 6;
   position: relative;
   min-width: 0;
-  padding: 16px 20px;
+  padding: 16px 20px 16px clamp(32px, 4.5vw, 54px);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -2143,6 +2143,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-catia {
+  /* Match the institution text above across the two different grid gaps. */
+  padding-left: 44px;
   border-color: #afc0cc;
   background:
     linear-gradient(135deg, rgba(255,255,255,0.92), transparent 65%),
@@ -2281,7 +2283,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 
 @media (max-width: 900px) {
   .profile-milestone {
-    padding: 16px;
+    padding-block: 16px;
   }
   .profile-record {
     grid-column: span 6;
@@ -2316,7 +2318,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   }
   .profile-milestone {
     grid-column: auto;
-    padding: 16px;
+    padding: 16px 24px;
   }
   .profile-milestone-score {
     font-size: 2.6rem;
