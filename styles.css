@@ -1866,67 +1866,177 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 .result .eyebrow { color: #d2b451; }
 .result .button { flex: 0 0 auto; }
 
-.academic-records { padding-bottom: 90px; }
+.academic-records { padding-bottom: 76px; }
 
-.academic-records-list {
+.profile-heading {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 24px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.profile-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.profile-heading h2 {
   margin: 0;
-  padding: 0;
-  overflow: hidden;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.profile-heading h2 span { color: var(--navy-soft); }
+
+.profile-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.profile-highlight {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 20px 24px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  background: rgba(255,255,255,0.35);
-  list-style: none;
-}
-
-.academic-record {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 24px;
-  padding: 24px 28px;
-}
-
-.academic-record + .academic-record { border-top: 1px solid var(--line); }
-
-.academic-record h3 {
-  margin: 0;
+  background: rgba(255,255,255,0.45);
   color: var(--navy-deep);
-  font-size: 1rem;
-  font-weight: 700;
+}
+
+.profile-highlight-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 30px;
+}
+
+.profile-highlight h3 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 750;
   line-height: 1.4;
 }
 
-.academic-record-meta {
-  margin: 6px 0 0;
-  color: var(--muted);
-  font-size: 0.875rem;
-  line-height: 1.55;
+.profile-rank {
+  flex: 0 0 auto;
+  color: #8a6d24;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
 }
 
-.academic-record-value {
-  margin: 0;
-  color: var(--navy-deep);
-  font-size: 0.94rem;
-  font-weight: 650;
-  white-space: nowrap;
+.profile-highlight-number {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin: 14px 0 10px;
+  font-size: clamp(2.6rem, 4.2vw, 3.2rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.055em;
 }
 
-.academic-record-score {
-  font-size: 1.7rem;
-  font-weight: 750;
-  letter-spacing: -0.035em;
-}
-
-.academic-record-score span {
-  color: var(--muted);
+.profile-highlight-number span {
   font-size: 1rem;
   font-weight: 500;
+  line-height: 1.4;
   letter-spacing: 0;
 }
 
+.profile-highlight-context {
+  max-width: 34ch;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.profile-highlight-featured {
+  border-color: var(--navy-deep);
+  background: linear-gradient(125deg, var(--navy-deep), var(--navy-soft));
+  color: var(--white);
+}
+
+.profile-highlight-featured .profile-rank,
+.profile-highlight-featured .profile-highlight-number { color: #ead28b; }
+.profile-highlight-featured .profile-highlight-number span { color: var(--white); }
+.profile-highlight-featured .profile-highlight-context { color: #e0e1eb; }
+
+.profile-highlight-catia {
+  border-top: 3px solid #a98737;
+  padding-top: 18px;
+  background: linear-gradient(120deg, #f6f3eb, #ece6d7);
+}
+
+.profile-recognition {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.profile-record {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.28);
+}
+
+.profile-record h3 {
+  margin: 0;
+  color: var(--navy-deep);
+  font-size: 1rem;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.profile-record p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.profile-record .profile-record-date {
+  margin-top: auto;
+  padding-top: 4px;
+  color: #80641f;
+  font-weight: 650;
+}
+
+@media (max-width: 900px) {
+  .profile-highlights { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-highlight-featured { grid-column: 1 / -1; }
+  .profile-recognition { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 620px) {
-  .academic-records { padding-bottom: 64px; }
-  .academic-record { grid-template-columns: 1fr; gap: 12px; padding: 22px 20px; }
+  .academic-records { padding-bottom: 56px; }
+  .profile-heading { gap: 16px; padding-top: 22px; margin-bottom: 20px; }
+  .profile-highlight { padding: 18px; }
+  .profile-highlight-catia { padding-top: 16px; }
+  .profile-highlight-topline { gap: 8px; }
+  .profile-highlight-number { font-size: 2.2rem; gap: 5px; }
+  .profile-highlight-number span { font-size: 0.875rem; }
+  .profile-highlight-featured .profile-highlight-number { font-size: 3rem; }
+  .profile-rank { font-size: 1.4rem; }
+  .profile-record { padding: 16px; }
 }
 
 .site-footer { border-top: 1px solid var(--line); }
