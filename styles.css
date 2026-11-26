@@ -1983,12 +1983,9 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 .profile-nscs-mark {
   display: block;
-  flex: 0 0 142px;
-  width: 142px;
-  height: 25px;
-  background-color: var(--navy-soft);
-  -webkit-mask: url("nscs-wordmark.svg") center / contain no-repeat;
-  mask: url("nscs-wordmark.svg") center / contain no-repeat;
+  flex: 0 0 92px;
+  width: 92px;
+  height: auto;
 }
 .profile-dsc-mark { display: block; width: 160px; height: auto; }
 
@@ -2296,7 +2293,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .profile-institutions { gap: 20px; padding: 24px 0 0; border-left: 0; border-top: 1px solid rgba(25,28,62,0.15); }
   .profile-secondary-marks { gap: 20px; padding-top: 0; border-top: 0; }
   .profile-affiliation-wordmark { flex-basis: 194px; width: 194px; height: 33px; }
-  .profile-nscs-mark { flex-basis: 126px; width: 126px; }
+  .profile-nscs-mark { flex-basis: 76px; width: 76px; }
   .profile-dsc-mark { width: 138px; }
   .profile-records {
     grid-template-columns: minmax(0, 1fr);
