@@ -28,20 +28,23 @@
         <p class="personal-affiliation">Embry-Riddle Aeronautical University <span>Daytona Beach, Florida</span></p>
       </div>
       <div class="personal-summary">
-        <p class="personal-summary-label">Design interests &amp; experience</p>
-        <p>My interests center on mechanical design and reverse engineering. My project work spans CATIA V5 component and assembly modeling, dimensioned engineering drawings, and launch vehicle conceptual design.</p>
+        <p class="personal-summary-label">Engineering interests</p>
+        <p>Mechanical design &amp; reverse engineering.</p>
         <nav class="personal-links" aria-label="Résumé and contact">
           <a class="personal-resume" href="Aayin_Choi_Resume.pdf" target="_blank" rel="noopener">View Résumé</a>
           <a href="https://www.linkedin.com/in/aayin-choi/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="mailto:aayinchoi07@gmail.com">Email</a>
+          <button class="personal-email-toggle" type="button" aria-expanded="false" aria-controls="email-contact">Email</button>
         </nav>
+        <div class="email-contact" id="email-contact" hidden>
+          <label class="email-address-label" for="contact-email">Email address</label>
+          <div class="email-copy-row">
+            <input id="contact-email" type="text" value="aayinchoi07@gmail.com" readonly spellcheck="false" aria-label="Email address">
+            <button type="button" class="email-copy">Copy</button>
+          </div>
+          <p class="email-copy-status" role="status" aria-live="polite"></p>
+        </div>
       </div>
-      <dl class="personal-details" aria-label="Education and technical background">
-        <div><dt>Degree in progress</dt><dd>B.S. Aerospace Engineering</dd></div>
-        <div><dt>Expected graduation</dt><dd>December 2029</dd></div>
-        <div><dt>Engineering software</dt><dd>CATIA V5 <span>·</span> MATLAB</dd></div>
-        <div><dt>Citizenship</dt><dd>U.S. Citizen</dd></div>
-      </dl>
+
     </section>
 
     <section class="portfolio-intro shell" aria-labelledby="portfolio-title">
@@ -194,5 +197,32 @@
       <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">Back to top ↑</a>
     </div>
   </footer>
+  <script>
+    (() => {
+      const toggle = document.querySelector('.personal-email-toggle');
+      const contact = document.querySelector('#email-contact');
+      const address = document.querySelector('#contact-email');
+      const copy = document.querySelector('.email-copy');
+      const status = document.querySelector('.email-copy-status');
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', String(open));
+        contact.hidden = !open;
+        status.textContent = '';
+        if (open) address.focus();
+      });
+      copy.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(address.value);
+          status.textContent = 'Email address copied.';
+        } catch {
+          address.focus();
+          address.select();
+          address.setSelectionRange(0, address.value.length);
+          status.textContent = 'Address selected. Press Ctrl+C or Command+C to copy.';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
