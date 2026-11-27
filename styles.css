@@ -2670,6 +2670,168 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .profile-roadmap .profile-record .profile-record-date { margin-top: 3px; }
 }
 
+/* Academic landing: university identity and an aviation drawing language. */
+.profile-heading.academic-heading {
+  grid-template-columns: minmax(0,1.12fr) minmax(340px,0.88fr);
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 32px;
+  background:
+    linear-gradient(90deg,rgba(61,63,115,0.045) 1px,transparent 1px) 0 0 / 58px 58px,
+    linear-gradient(rgba(61,63,115,0.045) 1px,transparent 1px) 0 0 / 58px 58px,
+    linear-gradient(115deg,#fbfaf7,#ece8de);
+  box-shadow: 0 18px 48px rgba(25,28,62,0.06);
+}
+.academic-heading::before { left: 0; width: 100%; height: 4px; background: linear-gradient(90deg,var(--navy-deep) 0 56%,#b49744 56% 76%,#ddd4b8 76%); }
+.academic-heading .profile-heading-copy { position: relative; z-index: 1; min-height: 364px; padding: 34px clamp(32px,4.5vw,58px); display: flex; flex-direction: column; justify-content: center; }
+.academic-heading .profile-heading-kicker { max-width: 38ch; margin: 0 0 30px; font-size: 0.875rem; letter-spacing: 0.07em; line-height: 1.55; }
+.academic-heading h1 { font-size: clamp(3.4rem,6vw,5.25rem); }
+.academic-heading .profile-heading-caption { margin-top: 24px; color: var(--navy-deep); font-size: 1rem; }
+.academic-topics { display: flex; flex-wrap: wrap; gap: 6px 17px; margin-top: 23px; color: var(--muted); font-size: 0.875rem; }
+.academic-topics span + span { position: relative; }
+.academic-topics span + span::before { content: ""; position: absolute; left: -9px; top: 0.45em; width: 1px; height: 0.8em; background: rgba(61,63,115,0.25); }
+.academic-flightline { position: absolute; top: 216px; left: -62px; width: 660px; max-width: 65%; height: auto; color: var(--navy-soft); stroke: currentColor; stroke-width: 1; opacity: 0.15; pointer-events: none; }
+.academic-flightline-guide { stroke-dasharray: 4 6; stroke-width: 0.7; opacity: 0.65; }
+.academic-heading-aside { position: relative; z-index: 1; align-self: center; min-width: 0; padding: 24px 30px; border-left: 1px solid rgba(61,63,115,0.18); }
+.academic-college { margin: 0 0 12px; color: var(--gold); font-size: 0.875rem; font-weight: 700; letter-spacing: 0.035em; }
+.academic-degree { margin: 0; color: var(--navy-deep); font-size: 1.125rem; font-weight: 650; line-height: 1.5; }
+.academic-degree span { display: inline-block; color: var(--muted); font-size: 0.875rem; font-weight: 400; white-space: nowrap; }
+.academic-concentration { margin: 7px 0 0; color: var(--muted); font-size: 1rem; }
+.academic-term { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 18px; margin: 24px 0 22px; }
+.academic-term dt { margin-bottom: 5px; color: var(--muted); font-size: 0.875rem; line-height: 1.5; }
+.academic-term dd { margin: 0; color: var(--navy-deep); font-size: 1rem; font-weight: 600; line-height: 1.5; }
+.academic-directory { display: grid; border-top: 1px solid rgba(61,63,115,0.18); }
+.academic-directory a { display: flex; align-items: center; min-height: 46px; padding-block: 10px; border-bottom: 1px solid rgba(61,63,115,0.12); color: var(--navy-deep); font-size: 0.9375rem; font-weight: 600; line-height: 1.5; text-decoration: none; }
+.academic-directory a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.academic-directory a:focus-visible { outline: 3px solid var(--navy-soft); outline-offset: 3px; }
+.academic-section-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 24px; margin: 0 0 20px; scroll-margin-top: 26px; }
+.academic-section-heading h2 { margin: 0; color: var(--navy-deep); font-size: 1.125rem; line-height: 1.5; letter-spacing: -0.015em; }
+.academic-section-heading::after { content: ""; flex: 1; min-width: 28px; height: 1px; background: linear-gradient(90deg,rgba(155,118,0,0.5),var(--line)); }
+.academic-section-heading > span { order: 1; color: var(--muted); font-size: 0.875rem; }
+
+/* Calculus I: course result, recorded examinations, instructor confirmation. */
+.calculus-record { padding-bottom: 72px; }
+.calc-topline { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 24px; margin: 28px 0; font-size: 0.875rem; }
+.calc-topline a { display: inline-flex; align-items: center; min-height: 44px; color: var(--navy-deep); font-weight: 650; text-underline-offset: 4px; }
+.calc-topline > span { color: var(--muted); }
+.calc-hero { display: grid; grid-template-columns: minmax(0,1.1fr) minmax(360px,0.9fr); gap: clamp(32px,5vw,70px); align-items: center; padding-block: 10px 68px; }
+.calc-hero-copy { min-width: 0; }
+.calc-hero-copy .eyebrow { margin-bottom: 20px; font-size: 0.875rem; letter-spacing: 0.08em; }
+.calc-hero h1 { margin: 0; color: var(--navy-deep); font-size: clamp(4rem,7vw,6rem); line-height: 0.98; letter-spacing: -0.065em; }
+.calc-hero h1 > span { color: var(--gold); }
+.calc-course-name { margin: 19px 0 0; color: var(--navy-soft); font-size: 1.25rem; line-height: 1.5; }
+.calc-introduction { max-width: 43ch; margin: 22px 0 0; color: #4d515d; font-size: 1.125rem; line-height: 1.7; }
+.calc-introduction strong { color: var(--navy-deep); font-weight: 650; }
+.calc-course-facts { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 17px 24px; margin: 28px 0 0; padding-top: 21px; border-top: 1px solid var(--line); }
+.calc-course-facts > div:first-child { grid-column: 1 / -1; }
+.calc-course-facts dt { margin-bottom: 4px; color: var(--muted); font-size: 0.875rem; }
+.calc-course-facts dd { margin: 0; color: var(--navy-deep); font-size: 1rem; font-weight: 500; line-height: 1.5; }
+.calc-result { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; min-height: 364px; padding: 29px 34px 25px; overflow: hidden; border: 1px solid #d4b860; border-radius: 20px; background: linear-gradient(135deg,#202546,#32365b); box-shadow: 0 14px 36px rgba(25,28,62,0.13),inset 0 0 0 1px rgba(234,210,139,0.2); color: #f5f4ed; }
+.calc-result-drawing { position: absolute; z-index: -1; right: -15px; bottom: -18px; width: 310px; max-width: 85%; height: auto; stroke: #d7ddee; stroke-width: 1; opacity: 0.13; pointer-events: none; }
+.calc-result-curve { stroke: #e4cd87; stroke-width: 2; }
+.calc-result-guide { stroke-dasharray: 3 5; stroke-width: 0.65; }
+.calc-result-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.calc-result-top > span:first-child { color: #d9ddec; font-size: 0.875rem; }
+.calc-result-rank { padding: 5px 10px; border: 1px solid rgba(234,210,139,0.45); border-radius: 5px; background: rgba(234,210,139,0.065); color: #ead28b; font-size: 2rem; font-weight: 750; line-height: 1.2; letter-spacing: -0.05em; }
+.calc-result-main { margin-block: 25px; }
+.calc-result-label { margin: 0 0 12px; color: #d9ddec; font-size: 0.875rem; }
+.calc-final-score { display: flex; align-items: baseline; flex-wrap: nowrap; gap: 12px; margin: 0; color: #ead28b; font-size: clamp(2.8rem,4.5vw,4rem); font-weight: 750; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -0.065em; white-space: nowrap; }
+.calc-final-score > span { flex: 0 0 auto; color: #dee2ee; font-size: 1.4rem; font-weight: 400; line-height: 1.4; letter-spacing: -0.015em; }
+.calc-result-scope { margin: 18px 0 0; color: #ede7d2; font-size: 1rem; line-height: 1.6; }
+.calc-result-confirmed { margin: 0; padding-top: 16px; border-top: 1px solid rgba(221,225,239,0.2); color: #d9ddec; font-size: 0.875rem; }
+.calc-section-heading { display: flex; align-items: end; justify-content: space-between; flex-wrap: wrap; gap: 18px 30px; margin-bottom: 24px; }
+.calc-section-heading .eyebrow { margin-bottom: 10px; font-size: 0.875rem; }
+.calc-section-heading h2 { max-width: 600px; margin: 0; color: var(--navy-deep); font-size: clamp(1.75rem,3vw,2.35rem); line-height: 1.15; letter-spacing: -0.045em; }
+.calc-section-heading > p { margin: 0; color: var(--muted); font-size: 0.875rem; }
+.calc-exam-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); margin: 0; padding: 0; overflow: hidden; border: 1px solid rgba(61,63,115,0.22); border-radius: 16px; background: rgba(255,255,255,0.55); list-style: none; }
+.calc-exam-grid > li { min-width: 0; min-height: 168px; padding: 24px 22px 20px; }
+.calc-exam-grid > li + li { border-left: 1px solid rgba(61,63,115,0.15); }
+.calc-exam-grid h3 { margin: 0 0 20px; color: var(--navy-deep); font-size: 1rem; font-weight: 600; line-height: 1.4; letter-spacing: -0.015em; }
+.calc-exam-score { display: flex; align-items: baseline; flex-wrap: nowrap; gap: 7px; margin: 0; color: var(--navy-deep); white-space: nowrap; }
+.calc-exam-score strong { font-size: clamp(2rem,3.2vw,2.75rem); font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; letter-spacing: -0.055em; }
+.calc-exam-score > span { color: var(--muted); font-size: 1rem; }
+.calc-exam-note { margin: 12px 0 0; color: var(--muted); font-size: 0.8125rem; line-height: 1.5; }
+.calc-exam-grid .calc-exam-final { background: rgba(155,118,0,0.055); box-shadow: inset 0 3px 0 #ad8c35; }
+.calc-exam-final .calc-exam-score strong { color: var(--gold); }
+.calc-grading-note { max-width: 100ch; margin: 17px 0 0; color: var(--muted); font-size: 0.875rem; line-height: 1.75; }
+.calc-grading-note strong { color: var(--navy-deep); font-weight: 600; }
+.calc-confirmation { display: grid; grid-template-columns: minmax(0,0.8fr) minmax(0,1.2fr); gap: clamp(32px,5vw,64px); margin-top: 70px; padding: 38px clamp(28px,4.5vw,54px) 40px; border: 1px solid rgba(61,63,115,0.2); border-top: 3px solid var(--navy-soft); border-radius: 18px; background: linear-gradient(115deg,rgba(255,255,255,0.8),rgba(236,232,222,0.55)); }
+.calc-confirmation-heading .eyebrow { margin-bottom: 17px; font-size: 0.875rem; }
+.calc-confirmation h2 { margin: 0; color: var(--navy-deep); font-size: clamp(1.75rem,3vw,2.5rem); line-height: 1.13; letter-spacing: -0.045em; }
+.calc-instructor-name { margin: 25px 0 3px; color: var(--navy-deep); font-size: 1rem; font-weight: 650; }
+.calc-instructor-role { margin: 0; color: var(--muted); font-size: 0.875rem; line-height: 1.6; }
+.calc-letter { min-width: 0; padding-left: 28px; border-left: 1px solid rgba(155,118,0,0.3); }
+.calc-letter-label { margin: 0; color: var(--gold); font-size: 0.875rem; }
+.calc-letter blockquote { margin: 16px 0 24px; }
+.calc-letter blockquote p { margin: 0; color: var(--navy-deep); font-size: clamp(1.125rem,1.8vw,1.5rem); line-height: 1.6; letter-spacing: -0.025em; }
+.calc-letter cite { display: block; margin-top: 16px; color: var(--muted); font-size: 0.875rem; font-style: normal; }
+.calc-letter-context { margin: 0; color: #545967; font-size: 1rem; line-height: 1.7; }
+.calc-letter-availability { margin: 21px 0 0; padding-top: 17px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.875rem; }
+.calc-topline a:focus-visible,
+.calculus-page .footer-inner a:focus-visible { outline: 3px solid var(--navy-soft); outline-offset: 4px; }
+@media (max-width: 900px) {
+  .profile-heading.academic-heading { grid-template-columns: minmax(0,1fr); }
+  .academic-heading .profile-heading-copy { min-height: 335px; }
+  .academic-heading-aside { margin-inline: clamp(32px,4.5vw,58px); padding: 24px 0 16px; border-left: 0; border-top: 1px solid rgba(61,63,115,0.18); }
+  .academic-flightline { max-width: none; width: 660px; top: 170px; }
+  .academic-term { max-width: 450px; }
+  .calc-hero { grid-template-columns: minmax(0,1fr); gap: 34px; padding-bottom: 54px; }
+  .calc-hero h1 { font-size: clamp(3.5rem,9vw,5rem); }
+  .calc-result { min-height: 330px; }
+  .calc-exam-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .calc-exam-grid > li { min-height: 160px; }
+  .calc-exam-grid > li:nth-child(2n+1) { border-left: 0; }
+  .calc-exam-grid > li:nth-child(n+3) { border-top: 1px solid rgba(61,63,115,0.15); }
+  .calc-exam-grid > li:last-child { grid-column: 1 / -1; }
+  .calc-confirmation { grid-template-columns: minmax(0,1fr); gap: 28px; }
+  .calc-letter { padding: 26px 0 0; border-left: 0; border-top: 1px solid rgba(155,118,0,0.3); }
+}
+@media (max-width: 620px) {
+  .profile-heading.academic-heading { gap: 0; padding: 9px; margin-bottom: 26px; }
+  .academic-heading .profile-heading-copy { min-height: 320px; padding: 28px 24px; }
+  .academic-heading .profile-heading-kicker { margin-bottom: 25px; font-size: 0.875rem; letter-spacing: 0.035em; }
+  .academic-heading h1 { font-size: clamp(2.7rem,13.5vw,3.5rem); }
+  .academic-heading .profile-heading-caption { max-width: 24ch; margin-top: 22px; }
+  .academic-topics { gap: 6px 15px; margin-top: 20px; }
+  .academic-topics span + span::before { display: none; }
+  .academic-heading-aside { margin-inline: 24px; padding: 24px 0 16px; }
+  .academic-degree { font-size: 1rem; }
+  .academic-term { gap: 14px; }
+  .academic-term dd { font-size: 0.9375rem; }
+  .academic-flightline { width: 520px; left: -85px; top: 205px; opacity: 0.11; }
+  .academic-section-heading { gap: 8px 14px; margin-bottom: 18px; }
+  .academic-section-heading h2 { font-size: 1rem; }
+  .academic-section-heading > span { font-size: 0.8125rem; }
+  .calculus-record { padding-bottom: 48px; }
+  .calc-topline { margin-block: 17px 24px; }
+  .calc-hero { gap: 30px; padding-top: 0; }
+  .calc-hero h1 { font-size: clamp(3rem,14vw,3.75rem); }
+  .calc-hero-copy .eyebrow { font-size: 0.875rem; }
+  .calc-course-name { font-size: 1.125rem; margin-top: 17px; }
+  .calc-introduction { margin-top: 19px; font-size: 1rem; }
+  .calc-course-facts { margin-top: 23px; padding-top: 18px; }
+  .calc-result { min-height: 326px; padding: 24px; border-radius: 16px; }
+  .calc-result-main { margin-block: 22px; }
+  .calc-final-score { gap: 10px; font-size: clamp(2.4rem,11.5vw,2.9rem); }
+  .calc-final-score > span { font-size: 1.125rem; }
+  .calc-result-scope { margin-top: 16px; }
+  .calc-section-heading { gap: 14px; margin-bottom: 20px; }
+  .calc-section-heading h2 { font-size: 1.85rem; }
+  .calc-exam-grid { grid-template-columns: minmax(0,1fr); }
+  .calc-exam-grid > li { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 10px 14px; align-items: center; min-height: 98px; padding: 20px 24px; border-left: 0; }
+  .calc-exam-grid > li + li { border-left: 0; border-top: 1px solid rgba(61,63,115,0.15); }
+  .calc-exam-grid h3 { margin: 0; }
+  .calc-exam-score strong { font-size: 2.35rem; }
+  .calc-exam-note { grid-column: 1 / -1; margin: -2px 0 0; }
+  .calc-grading-note { margin-top: 16px; }
+  .calc-confirmation { gap: 23px; margin-top: 44px; padding: 28px 24px; border-radius: 16px; }
+  .calc-confirmation h2 { font-size: 2rem; }
+  .calc-instructor-name { margin-top: 21px; }
+  .calc-letter { padding-top: 22px; }
+  .calc-letter blockquote { margin-block: 14px 21px; }
+  .calc-letter blockquote p { font-size: 1.1875rem; }
+}
+
 /* Shared page navigation: portfolio and academic records. */
 .site-header-with-nav { gap: 24px; }
 .site-page-nav {
@@ -2718,8 +2880,6 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 .profile-milestone:focus-within { outline: 3px solid var(--navy-soft); outline-offset: 5px; }
 .profile-milestone-link:focus-visible { outline: 2px solid currentColor; outline-offset: -5px; }
 .profile-milestone-math::after { pointer-events: none; }
-.record-placeholder { min-height: calc(100vh - 201px); padding-block: 54px 80px; }
-.record-placeholder h1 { margin: 0; color: var(--navy-deep); font-size: clamp(2.75rem, 5vw, 4rem); letter-spacing: -0.055em; }
 @media (max-width: 620px) {
   .site-header-with-nav { flex-wrap: wrap; justify-content: flex-start; gap: 0; padding-top: 16px; }
   .site-header-with-nav .wordmark { width: 100%; margin-bottom: 12px; }
@@ -2728,7 +2888,6 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .academic-page .academic-records { padding-top: 18px; }
   .profile-milestone-link,
   .profile-milestone:nth-child(even) .profile-milestone-link { padding: 16px 24px; }
-  .record-placeholder { min-height: calc(100vh - 257px); padding-block: 36px 64px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -22,19 +22,41 @@
 
   <main>
     <section class="academic-records shell" id="academic-profile" aria-labelledby="academic-profile-title">
-      <header class="profile-heading">
+      <header class="profile-heading academic-heading">
+        <svg class="academic-flightline" viewBox="0 0 720 260" fill="none" aria-hidden="true">
+          <path d="M28 201C166 78 365 69 681 166C440 130 232 137 28 201Z" />
+          <path class="academic-flightline-guide" d="M0 202 720 162 M132 34v205 M352 24v215 M572 34v205 M24 89h669 M24 146h669" />
+          <path d="m125 195 7 7 7-7 M345 169l7 7 7-7 M565 163l7 7 7-7" />
+        </svg>
         <div class="profile-heading-copy">
-          <p class="profile-heading-kicker">Academic record · 2026 — Present</p>
+          <p class="profile-heading-kicker">Embry-Riddle Aeronautical University</p>
           <h1 id="academic-profile-title">Academic <span>Profile</span></h1>
-          <p class="profile-heading-caption">Achievements, honors &amp; membership</p>
+          <p class="profile-heading-caption">Aerospace Engineering · Daytona Beach</p>
+          <div class="academic-topics" aria-label="Academic record categories">
+            <span>Course achievements</span>
+            <span>Project results</span>
+            <span>Honors</span>
+          </div>
         </div>
-        <div class="profile-overview" aria-labelledby="profile-overview-title">
-          <h3 id="profile-overview-title">About this record</h3>
-          <p class="profile-overview-intro">Academic achievements, project results, honors, and memberships collected throughout my university studies.</p>
-          <p class="profile-overview-order">Entries are arranged in the order they were earned, from earlier milestones to more recent recognition.</p>
-        </div>
+        <aside class="academic-heading-aside" aria-label="University studies and page directory">
+          <p class="academic-college">College of Engineering</p>
+          <p class="academic-degree">B.S. in Aerospace Engineering <span>(in progress)</span></p>
+          <p class="academic-concentration">Aeronautics concentration</p>
+          <dl class="academic-term">
+            <div><dt>Academic record</dt><dd>2026 — Present</dd></div>
+            <div><dt>Expected graduation</dt><dd>December 2029</dd></div>
+          </dl>
+          <nav class="academic-directory" aria-label="On this page">
+            <a href="#course-achievements">Course &amp; project highlights</a>
+            <a href="#academic-honors">Honors &amp; Membership</a>
+          </nav>
+        </aside>
       </header>
 
+      <div class="academic-section-heading" id="course-achievements">
+        <h2>Course &amp; project highlights</h2>
+        <span>Spring 2026</span>
+      </div>
       <ol class="profile-records" aria-label="Academic achievements, honors and membership">
         <li class="profile-milestone profile-milestone-math" id="calculus-record">
           <a class="profile-milestone-link" href="calculus-i.html" aria-label="View Calculus I record">
