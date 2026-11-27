@@ -2035,11 +2035,11 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-math {
-  border-color: var(--navy-deep);
+  border-color: #b49242;
   background:
     linear-gradient(140deg, rgba(255,255,255,0.045), transparent 48%),
     linear-gradient(125deg, var(--navy-deep), #35395f);
-  box-shadow: 0 10px 26px rgba(25,28,62,0.12), inset 0 1px 0 rgba(255,255,255,0.12);
+  box-shadow: 0 10px 26px rgba(25,28,62,0.12), inset 0 0 0 1px rgba(234,210,139,0.12), inset 0 1px 0 rgba(255,255,255,0.12);
   color: var(--white);
 }
 
@@ -2530,19 +2530,9 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .index-heading { gap: 16px; }
 }
 
-/* Keep the two project results equal in size in one vertical column. */
-.profile-milestone-math { align-self: start; min-height: 204px; }
+/* Achievement scope emphasis and medal colors. */
 .profile-milestone-math .profile-milestone-context strong { color: #ead28b; font-weight: 750; }
 .profile-milestone-catia .profile-milestone-context strong { color: #244b69; font-weight: 700; }
-.profile-project-stack {
-  grid-column: span 6;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  grid-auto-rows: 1fr;
-  gap: 24px;
-  min-width: 0;
-}
-.profile-project-stack > .profile-milestone { grid-column: auto; min-height: 204px; scroll-margin-top: 28px; }
 .profile-milestone-lvp {
   padding-left: 44px;
   border-color: #91a6b7;
@@ -2591,8 +2581,47 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 .profile-milestone-lvp > * { position: relative; z-index: 1; }
 @media (max-width: 620px) {
-  .profile-project-stack { grid-column: auto; gap: 16px; }
   .profile-milestone-lvp { padding-inline: 24px; }
+}
+
+/* One chronological flow; new records can be appended without column imbalance. */
+.profile-records { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.profile-records > .profile-milestone {
+  grid-column: auto;
+  min-height: 176px;
+  padding: 20px clamp(32px, 4.5vw, 54px);
+}
+.profile-milestone-main {
+  grid-template-columns: 240px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+}
+.profile-milestone-context { max-width: 64ch; }
+.profile-records > .profile-record {
+  grid-column: auto;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  padding: 18px clamp(32px, 4.5vw, 54px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.28);
+}
+.profile-record::before { top: 50%; left: 20px; transform: translateY(-50%); }
+.profile-record::after { display: none; }
+.profile-record .profile-record-date { align-self: center; margin: 0; }
+@media (max-width: 900px) {
+  .profile-milestone-main { grid-template-columns: 200px minmax(0, 1fr); gap: 18px; }
+  .profile-records > .profile-record { grid-template-columns: 160px minmax(0, 1fr); gap: 6px 20px; }
+  .profile-record .profile-record-date { grid-column: 2; justify-self: start; }
+}
+@media (max-width: 620px) {
+  .profile-records > .profile-milestone { min-height: 248px; padding: 16px 24px; }
+  .profile-milestone-main { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .profile-records > .profile-record { grid-template-columns: minmax(0, 1fr); gap: 6px; margin: 0; padding: 18px 24px; }
+  .profile-record::before { left: 8px; }
+  .profile-record .profile-record-date { grid-column: auto; margin-top: 3px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
