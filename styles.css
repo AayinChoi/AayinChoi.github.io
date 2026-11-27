@@ -2584,44 +2584,29 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .profile-milestone-lvp { padding-inline: 24px; }
 }
 
-/* One chronological flow; new records can be appended without column imbalance. */
-.profile-records { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+/* Chronological highlights wrap two per row; smaller records keep their roadmap. */
 .profile-records > .profile-milestone {
-  grid-column: auto;
-  min-height: 176px;
-  padding: 20px clamp(32px, 4.5vw, 54px);
+  min-height: 204px;
+  padding-left: clamp(32px, 4.5vw, 54px);
 }
-.profile-milestone-main {
-  grid-template-columns: 240px minmax(0, 1fr);
-  align-items: center;
-  gap: 24px;
+.profile-records > .profile-milestone:nth-child(even) { padding-left: 44px; }
+.profile-milestone-math {
+  border-color: #e5c873;
+  box-shadow: 0 0 0 2px #d9b95f, 0 10px 26px rgba(25,28,62,0.12), inset 0 1px 0 rgba(255,245,205,0.24);
 }
-.profile-milestone-context { max-width: 64ch; }
-.profile-records > .profile-record {
-  grid-column: auto;
+.profile-roadmap { grid-column: 1 / -1; min-width: 0; }
+.profile-roadmap-list {
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr) auto;
-  align-items: center;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 24px;
-  padding: 18px clamp(32px, 4.5vw, 54px);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.28);
-}
-.profile-record::before { top: 50%; left: 20px; transform: translateY(-50%); }
-.profile-record::after { display: none; }
-.profile-record .profile-record-date { align-self: center; margin: 0; }
-@media (max-width: 900px) {
-  .profile-milestone-main { grid-template-columns: 200px minmax(0, 1fr); gap: 18px; }
-  .profile-records > .profile-record { grid-template-columns: 160px minmax(0, 1fr); gap: 6px 20px; }
-  .profile-record .profile-record-date { grid-column: 2; justify-self: start; }
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 @media (max-width: 620px) {
-  .profile-records > .profile-milestone { min-height: 248px; padding: 16px 24px; }
-  .profile-milestone-main { grid-template-columns: minmax(0, 1fr); gap: 6px; }
-  .profile-records > .profile-record { grid-template-columns: minmax(0, 1fr); gap: 6px; margin: 0; padding: 18px 24px; }
-  .profile-record::before { left: 8px; }
-  .profile-record .profile-record-date { grid-column: auto; margin-top: 3px; }
+  .profile-records > .profile-milestone,
+  .profile-records > .profile-milestone:nth-child(even) { padding: 16px 24px; }
+  .profile-roadmap-list { grid-template-columns: minmax(0, 1fr); gap: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
