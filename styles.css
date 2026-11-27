@@ -187,243 +187,110 @@ a { color: inherit; }
 
 .portfolio-panel-name span:last-child { color: #8a6d24; }
 
-/* Personal introduction: identity, education, then practical skills. */
 .personal-intro {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(340px, 0.88fr);
-  align-items: stretch;
-  gap: 16px;
-  margin-top: 30px;
-  padding: 16px;
-  border: 1px solid #d4d6df;
-  border-radius: 22px;
-  background: #f8f8f6;
-  box-shadow: 0 18px 48px rgba(25,28,62,0.065);
-}
-
-.personal-identity {
   position: relative;
-  isolation: isolate;
-  min-width: 0;
-  padding: 34px clamp(32px, 4.5vw, 58px) 30px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  background: linear-gradient(120deg, #222747, #171c36);
-  color: #fff;
+  align-items: center;
+  column-gap: 16px;
+  row-gap: 26px;
+  margin-top: 30px;
+  padding: 28px 16px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background:
+    linear-gradient(115deg, rgba(255,255,255,0.55), transparent 65%),
+    #ece8de;
+  box-shadow: inset 5px 0 0 var(--navy-soft);
 }
 
-.personal-identity::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(90deg, transparent 77%, rgba(181,199,230,0.035) 77%);
-}
-
-.personal-drawing {
-  position: absolute;
-  z-index: -1;
-  width: 168px;
-  height: 168px;
-  top: -20px;
-  right: -29px;
-  stroke: #a2b6dd;
-  stroke-width: 0.8;
-  opacity: 0.2;
-  pointer-events: none;
-}
-.personal-drawing-guide { stroke-dasharray: 3 4; opacity: 0.55; }
+.personal-identity { min-width: 0; padding-inline: clamp(32px, 4.5vw, 58px); }
+.personal-summary { min-width: 0; padding-inline: 30px; }
 
 .personal-identity .eyebrow {
-  margin: 0 0 17px;
-  color: #bcc9e2;
+  margin: 0 0 12px;
   font-size: 0.875rem;
-  letter-spacing: 0.13em;
-  font-weight: 600;
-}
-
-.personal-intro .portfolio-panel-name {
-  position: relative;
-  margin: 0;
-  color: #fff;
-  font-size: clamp(3.3rem, 5.7vw, 4.75rem);
-  font-weight: 650;
-  line-height: 1;
-  letter-spacing: -0.06em;
-}
-.personal-intro .portfolio-panel-name span:last-child { color: #bbcce9; }
-.personal-focus {
-  margin: 12px 0 0;
-  color: #c1cbe0;
-  font-size: 1rem;
-  line-height: 1.5;
 }
 
 .personal-school {
-  display: grid;
-  gap: 11px;
-  margin-top: 30px;
-  padding-top: 21px;
-  border-top: 1px solid rgba(206,219,244,0.18);
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
 }
-.personal-degree {
-  margin: 0;
-  color: #fff;
-  font-size: 1.0625rem;
-  font-weight: 600;
-  line-height: 1.55;
-}
-.personal-degree span {
-  display: inline-block;
-  color: #b9c5dd;
-  font-size: 0.875rem;
-  font-weight: 400;
-  white-space: nowrap;
-}
+.personal-school .personal-affiliation { min-width: 0; margin: 0; }
+
 .personal-affiliation {
   display: grid;
-  gap: 3px;
-  margin: 0;
-  color: #d5ddee;
+  gap: 2px;
+  margin: 14px 0 0;
+  color: var(--navy-deep);
   font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
-.personal-affiliation span { color: #aebbd4; font-size: 0.875rem; }
-
-.personal-facts {
-  display: grid;
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
-  gap: 16px;
-  margin: 24px 0 0;
-}
-.personal-facts > div { min-width: 0; }
-.personal-facts > div + div { padding-left: 21px; border-left: 1px solid rgba(206,219,244,0.18); }
-.personal-facts dt { margin: 0 0 5px; color: #aebbd4; font-size: 0.875rem; line-height: 1.5; }
-.personal-facts dd,
-.personal-facts .personal-citizenship {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  background: transparent;
-  color: #f4f7ff;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.5;
+  font-weight: 650;
 }
 
-.personal-summary {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-  padding: 20px 30px;
-}
-.personal-summary .personal-summary-label {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  margin: 0 0 23px;
-  color: #3f4866;
+.personal-affiliation span {
+  color: var(--muted);
   font-size: 0.875rem;
-  font-weight: 650;
-  letter-spacing: 0.07em;
-  line-height: 1.5;
-  text-transform: uppercase;
+  font-weight: 500;
 }
-.personal-summary-label::before { content: ""; width: 22px; height: 2px; background: #7885a6; }
-.personal-capabilities { display: grid; gap: 22px; margin: 0; }
-.personal-capabilities dt { margin: 0 0 10px; color: #656c7c; font-size: 0.875rem; font-weight: 500; line-height: 1.5; }
-.personal-capabilities dd { margin: 0; color: var(--navy-deep); font-size: 1rem; }
-.personal-tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-.personal-tools > span {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  min-height: 59px;
-  padding: 12px 14px;
-  border: 1px solid #dce0e8;
-  border-radius: 7px;
-  background: #fff;
-  font-weight: 650;
-  line-height: 1.4;
+
+.personal-summary > p:not(.personal-summary-label) {
+  max-width: 56ch;
+  margin: 0;
+  color: #4d515d;
+  font-size: 1rem;
+  line-height: 1.65;
 }
-.personal-tools svg { flex: 0 0 auto; width: 25px; height: 25px; color: #63769b; stroke: currentColor; stroke-width: 1.4; stroke-linejoin: round; }
-.personal-skills ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px 18px; margin: 0; padding: 0; list-style: none; }
-.personal-skills li { position: relative; padding-left: 12px; font-size: 0.9375rem; line-height: 1.5; }
-.personal-skills li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 4px; height: 4px; background: #7d8eae; }
 
 .personal-links {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px 20px;
-  margin-top: 26px;
-  padding-top: 22px;
-  border-top: 1px solid #dce0e8;
+  gap: 10px 24px;
+  margin-top: 20px;
 }
+
 .personal-links a,
 .personal-links .personal-email-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 44px;
   color: var(--navy-deep);
   font-size: 0.875rem;
-  font-weight: 650;
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.personal-links .personal-resume {
+  padding: 10px 18px;
+  border: 1px solid var(--navy-deep);
+  border-radius: 8px;
+  background: var(--navy-deep);
+  color: var(--white);
   text-decoration: none;
 }
-.personal-links .personal-resume {
-  padding: 10px 15px;
-  border: 1px solid #242b4c;
-  border-radius: 6px;
-  background: #242b4c;
-  color: #fff;
+
+.personal-links .personal-email-toggle {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  font-family: inherit;
+  line-height: inherit;
+  cursor: pointer;
 }
-.personal-links svg { width: 18px; height: 18px; flex: 0 0 auto; stroke: currentColor; stroke-width: 1.5; stroke-linejoin: round; }
-.personal-links .personal-email-toggle { border: 0; padding: 0; background: transparent; font-family: inherit; line-height: inherit; cursor: pointer; }
 .personal-links a:hover,
-.personal-links .personal-email-toggle:hover { color: #566b96; }
-.personal-links .personal-resume:hover { color: #fff; background: #394263; }
+.personal-links .personal-email-toggle:hover { opacity: 0.75; }
 .personal-links a:focus-visible,
 .personal-links button:focus-visible,
 .email-contact :focus-visible,
-.project-directory a:focus-visible { outline: 3px solid #7889b0; outline-offset: 4px; }
-
-@media (max-width: 900px) {
-  .personal-intro { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .personal-identity { padding-block: 32px; }
-  .personal-summary { padding: 30px clamp(32px, 4.5vw, 58px) 18px; }
-  .personal-intro .portfolio-panel-name { font-size: 4.5rem; }
-  .personal-school { margin-top: 26px; }
-  .personal-facts { grid-template-columns: max-content max-content; gap: 32px; }
-  .personal-facts > div + div { padding-left: 32px; }
-  .personal-summary .personal-summary-label { margin-bottom: 20px; }
+.project-directory a:focus-visible {
+  outline: 3px solid #9b7600;
+  outline-offset: 4px;
 }
-@media (max-width: 620px) {
-  .personal-intro { gap: 0; margin-top: 18px; padding: 8px; border-radius: 18px; }
-  .personal-identity { padding: 29px 24px 26px; border-radius: 10px; }
-  .personal-identity .eyebrow { margin-bottom: 17px; font-size: 0.875rem; letter-spacing: 0.08em; }
-  .personal-intro .portfolio-panel-name { font-size: clamp(2.75rem, 13vw, 3.65rem); }
-  .personal-focus { margin-top: 10px; }
-  .personal-school { margin-top: 24px; padding-top: 20px; }
-  .personal-degree { font-size: 1rem; }
-  .personal-affiliation { font-size: 0.9375rem; }
-  .personal-facts { grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 12px; margin-top: 22px; }
-  .personal-facts > div + div { padding-left: 14px; }
-  .personal-summary { padding: 26px 24px 16px; }
-  .personal-capabilities { gap: 20px; }
-  .personal-tools > span { gap: 8px; padding: 12px 10px; font-size: 0.9375rem; }
-  .personal-tools svg { width: 22px; height: 22px; }
-  .personal-skills ul { column-gap: 14px; }
-  .personal-skills li { font-size: 0.875rem; }
-  .personal-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; margin-top: 22px; padding-top: 20px; }
-  .personal-links .personal-resume { grid-column: 1 / -1; }
-  .personal-links > :not(.personal-resume) { border: 1px solid #dce0e8; border-radius: 6px; }
-  .personal-links .personal-resume { padding-inline: 12px; }
+
+.personal-summary .personal-summary-label {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-size: 0.875rem;
+  font-weight: 750;
 }
 
 .email-contact { max-width: 390px; margin-top: 16px; }
@@ -2446,6 +2313,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 .footer-inner a { text-decoration: none; font-weight: 750; }
 
 @media (max-width: 900px) {
+  .personal-intro { grid-template-columns: 1fr; gap: 28px; }
+  .personal-summary { padding-inline: 40px; }
   .portfolio-intro { grid-template-columns: 1fr; gap: 14px; margin-top: 24px; }
   .portfolio-intro-main { min-height: 380px; }
   .portfolio-intro-panel { padding: 0 40px 28px; }
@@ -2529,6 +2398,9 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .portfolio-intro h1 { margin-top: 56px; padding-top: 0; font-size: clamp(2.65rem, 14vw, 3.5rem); }
   .portfolio-disciplines { display: grid; grid-template-columns: 1fr 1fr; margin-top: 36px; }
   .portfolio-disciplines span { text-align: center; }
+  .personal-intro { grid-template-columns: 1fr; gap: 24px; margin-top: 18px; padding: 26px 9px; }
+  .personal-identity, .personal-summary { padding-inline: 24px; }
+  .personal-links { gap: 12px 20px; }
   .project-directory a { padding-block: 16px; }
   .project-index { padding-block: 28px 76px; }
   .index-card { grid-template-columns: 1fr; grid-template-rows: auto auto auto; gap: 0; padding: 14px 18px 22px; border-radius: 20px; }
@@ -2621,6 +2493,13 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 /* Quiet accents shared by the portfolio and academic directories. */
+.personal-intro {
+  background: linear-gradient(115deg, rgba(255,255,255,0.72), transparent 62%),
+    linear-gradient(155deg, transparent 70%, rgba(61,63,115,0.035) 70%, rgba(61,63,115,0.035) 86%, transparent 86%),
+    #ece8de;
+}
+.personal-summary-label { display: flex; align-items: center; gap: 10px; }
+.personal-summary-label::before { content: ""; width: 22px; height: 2px; background: var(--gold); }
 .profile-heading {
   background: linear-gradient(115deg, #fbfaf7 35%, rgba(238,240,243,0.85)),
     linear-gradient(150deg, transparent 70%, rgba(61,63,115,0.05) 70%);
@@ -2692,6 +2571,58 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .profile-records > .profile-milestone,
   .profile-records > .profile-milestone:nth-child(even) { padding: 16px 24px; }
   .profile-roadmap-list { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+}
+
+/* A clearer information hierarchy within the original introduction. */
+.personal-intro { padding-block: 32px; }
+.personal-intro .portfolio-panel-name { font-size: clamp(3rem, 5vw, 4.25rem); }
+.personal-school {
+  display: grid;
+  gap: 9px;
+  margin-top: 23px;
+  padding-top: 19px;
+  border-top: 1px solid rgba(61,63,115,0.17);
+}
+.personal-degree { margin: 0; color: var(--navy-deep); font-size: 1rem; font-weight: 650; line-height: 1.55; }
+.personal-degree span { display: inline-block; color: var(--muted); font-size: 0.875rem; font-weight: 400; white-space: nowrap; }
+.personal-affiliation { font-weight: 500; line-height: 1.5; }
+.personal-facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 12px 24px; margin: 21px 0 0; }
+.personal-facts > div { min-width: 0; }
+.personal-facts > div + div { padding-left: 24px; border-left: 1px solid rgba(61,63,115,0.17); }
+.personal-facts dt { margin: 0 0 4px; color: var(--muted); font-size: 0.875rem; line-height: 1.5; }
+.personal-facts dd { margin: 0; color: var(--navy-deep); font-size: 1rem; font-weight: 600; line-height: 1.5; }
+.personal-facts .personal-citizenship { padding: 0; border: 0; background: transparent; }
+.personal-summary { padding-block: 8px; border-left: 1px solid rgba(61,63,115,0.17); }
+.personal-summary h3.personal-summary-label { margin-bottom: 22px; font-size: 0.875rem; line-height: 1.5; }
+.personal-capabilities { display: grid; gap: 20px; margin: 0; }
+.personal-capabilities dt { margin: 0 0 7px; color: var(--muted); font-size: 0.875rem; font-weight: 500; line-height: 1.5; }
+.personal-capabilities dd { margin: 0; color: var(--navy-deep); font-size: 1rem; line-height: 1.65; }
+.personal-tools { font-weight: 500; }
+.personal-tools span { padding-inline: 9px; color: #88868b; }
+.personal-skills ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 18px; margin: 0; padding: 0; list-style: none; }
+.personal-skills li { position: relative; padding-left: 11px; font-size: 0.9375rem; line-height: 1.5; }
+.personal-skills li::before { content: ""; position: absolute; top: 0.6em; left: 0; width: 3px; height: 3px; background: #858399; }
+.personal-summary .personal-links { margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(61,63,115,0.17); }
+.personal-links a, .personal-links .personal-email-toggle { display: inline-flex; align-items: center; min-height: 44px; }
+@media (max-width: 900px) {
+  .personal-summary { margin-inline: clamp(32px, 4.5vw, 58px); padding: 25px 0 0; border-left: 0; border-top: 1px solid rgba(61,63,115,0.17); }
+  .personal-capabilities { gap: 16px; }
+}
+@media (max-width: 620px) {
+  .personal-intro { padding-block: 27px; }
+  .personal-intro .portfolio-panel-name { font-size: clamp(2.75rem, 12vw, 3.5rem); }
+  .personal-identity .eyebrow { font-size: 0.875rem; letter-spacing: 0.07em; }
+  .personal-school { margin-top: 20px; padding-top: 17px; }
+  .personal-degree { margin: 0; }
+  .personal-facts { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 12px; margin-top: 18px; }
+  .personal-facts > div + div { padding-left: 15px; }
+  .personal-facts dd { font-size: 0.9375rem; }
+  .personal-summary { margin-inline: 24px; padding-top: 24px; }
+  .personal-summary h3.personal-summary-label { margin-bottom: 18px; }
+  .personal-skills ul { gap: 9px 14px; }
+  .personal-skills li { font-size: 0.875rem; }
+  .personal-summary .personal-links { gap: 8px 17px; margin-top: 21px; padding-top: 17px; }
+  .personal-links .personal-resume { padding-inline: 14px; }
 }
 
 /* A framed recognition archive that expands as records are added. */
