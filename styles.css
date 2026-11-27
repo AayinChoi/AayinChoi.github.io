@@ -2091,15 +2091,19 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   color: #e0e1eb;
 }
 
-.profile-milestone-catia {
-  /* Align with the academic directory above. */
+.profile-milestone-catia,
+.profile-milestone-lvp {
   padding-left: 44px;
-  border-color: #b49242;
   background:
     linear-gradient(135deg, rgba(255,255,255,0.92), transparent 65%),
     linear-gradient(115deg, #edf2f5, #dbe5ec);
-  box-shadow: 0 8px 24px rgba(36,75,105,0.08), inset 0 0 0 1px rgba(180,146,66,0.24), inset 0 1px 0 #fff;
+  box-shadow: 0 8px 24px rgba(36,75,105,0.08), inset 0 1px 0 #fff;
   color: #193e5b;
+}
+
+.profile-milestone-catia {
+  border-color: #b49242;
+  box-shadow: 0 8px 24px rgba(36,75,105,0.08), inset 0 0 0 1px rgba(180,146,66,0.24), inset 0 1px 0 #fff;
 }
 
 .profile-milestone-catia::before {
@@ -2112,7 +2116,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   background: linear-gradient(90deg, #a18132, #e7d296 48%, rgba(180,146,66,0.12));
 }
 
-.profile-milestone-catia::after {
+.profile-milestone-catia::after,
+.profile-milestone-lvp::after {
   content: "";
   position: absolute;
   right: -28px;
@@ -2124,7 +2129,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   pointer-events: none;
 }
 
-.profile-milestone-catia > * {
+.profile-milestone-catia > *,
+.profile-milestone-lvp > * {
   position: relative;
   z-index: 1;
 }
@@ -2149,7 +2155,9 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-catia .profile-milestone-score span,
-.profile-milestone-catia .profile-milestone-context {
+.profile-milestone-catia .profile-milestone-context,
+.profile-milestone-lvp .profile-milestone-score span,
+.profile-milestone-lvp .profile-milestone-context {
   color: #4b6172;
 }
 
@@ -2536,60 +2544,10 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .index-heading { gap: 16px; }
 }
 
-/* Achievement scope emphasis and medal colors. */
+/* Scope emphasis; gold decoration is reserved for first-place achievements. */
 .profile-milestone-math .profile-milestone-context strong { color: #ead28b; font-weight: 750; }
-.profile-milestone-catia .profile-milestone-context strong { color: #244b69; font-weight: 700; }
-.profile-milestone-lvp {
-  padding-left: 44px;
-  border-color: #8b99a6;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.88), transparent 70%),
-    linear-gradient(115deg, #edf3f7, #d7e4ee);
-  box-shadow: 0 0 0 1px #bdc8d2, 0 8px 24px rgba(36,75,105,0.06), inset 0 0 0 1px rgba(255,255,255,0.75);
-  color: #274d69;
-}
-.profile-milestone-lvp .profile-standing {
-  display: grid;
-  place-items: center;
-  min-width: 44px;
-  min-height: 34px;
-  padding: 2px 8px;
-  border: 1px solid #8799a8;
-  border-radius: 4px;
-  background: linear-gradient(135deg, #fafcfe 0%, #dce4eb 40%, #b9c8d4 74%, #e7eef3 100%);
-  box-shadow: inset 0 1px 0 #fff, 0 2px 5px rgba(39,77,105,0.08);
-  color: #354d60;
-  font-size: 1.45rem;
-}
-.profile-milestone-lvp .profile-milestone-context,
-.profile-milestone-lvp .profile-milestone-score span { color: #4f6475; }
-.profile-milestone-lvp .profile-milestone-context strong { color: #274d69; font-weight: 700; }
-.profile-milestone-lvp .profile-project-output { border-color: #bdcdd9; color: #4f6475; }
-.profile-milestone-lvp::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 20px;
-  width: calc(100% - 40px);
-  height: 2px;
-  background: linear-gradient(90deg, #8399aa, #f7fafc 48%, #a4b8c7);
-}
-.profile-milestone-lvp::after {
-  content: "";
-  position: absolute;
-  right: -28px;
-  top: 54px;
-  width: 160px;
-  height: 190px;
-  background: linear-gradient(140deg, rgba(68,112,145,0.11), rgba(68,112,145,0));
-  clip-path: polygon(68% 0, 100% 0, 32% 100%, 0 100%);
-  pointer-events: none;
-}
-.profile-milestone-lvp > * { position: relative; z-index: 1; }
-@media (max-width: 620px) {
-  .profile-milestone-lvp { padding-inline: 24px; }
-}
-
+.profile-milestone-catia .profile-milestone-context strong,
+.profile-milestone-lvp .profile-milestone-context strong { color: #244b69; font-weight: 700; }
 /* Chronological highlights wrap two per row; smaller records keep their roadmap. */
 .profile-records > .profile-milestone {
   min-height: 204px;
