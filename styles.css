@@ -2672,31 +2672,63 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 
 /* Shared page navigation: portfolio and academic records. */
 .site-header-with-nav { gap: 24px; }
-.site-page-nav { display: flex; align-self: stretch; gap: 28px; }
+.site-page-nav {
+  display: flex;
+  align-self: center;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid rgba(61,63,115,0.24);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.5);
+}
 .site-page-nav a {
-  position: relative;
   display: flex;
   align-items: center;
-  min-height: 44px;
-  padding: 4px 0;
-  color: var(--muted);
+  justify-content: center;
+  min-height: 42px;
+  padding: 8px 18px;
+  border-radius: 6px;
+  color: var(--navy-deep);
   font-size: 0.9375rem;
-  font-weight: 600;
+  font-weight: 650;
   line-height: 1.5;
   text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
 }
-.site-page-nav a::after { content: ""; position: absolute; right: 0; bottom: -1px; left: 0; height: 3px; background: transparent; }
-.site-page-nav a[aria-current] { color: var(--navy-deep); }
-.site-page-nav a[aria-current]::after { background: var(--navy); }
-.site-page-nav a:hover { color: var(--navy); }
-.site-page-nav a:focus-visible { outline: 3px solid var(--navy-soft); outline-offset: 4px; }
+.site-page-nav a[aria-current] { background: var(--navy-deep); color: var(--white); }
+.site-page-nav a:hover { background: rgba(61,63,115,0.09); }
+.site-page-nav a[aria-current]:hover { background: var(--navy-soft); }
+.site-page-nav a:focus-visible { outline: 3px solid var(--navy-soft); outline-offset: 3px; }
 .academic-page .academic-records { padding-top: 30px; }
+
+/* Native links make the complete achievement cards clickable. */
+.profile-records > .profile-milestone { padding: 0; }
+.profile-records > .profile-milestone:nth-child(even) { padding-left: 0; }
+.profile-milestone-link {
+  display: block;
+  min-height: 204px;
+  height: 100%;
+  padding: 16px 20px 16px clamp(32px, 4.5vw, 54px);
+  border-radius: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+.profile-milestone:nth-child(even) .profile-milestone-link { padding-left: 44px; }
+.profile-milestone-link:hover .profile-milestone-title h3 { text-decoration: underline; text-underline-offset: 4px; }
+.profile-milestone:focus-within { outline: 3px solid var(--navy-soft); outline-offset: 5px; }
+.profile-milestone-link:focus-visible { outline: 2px solid currentColor; outline-offset: -5px; }
+.profile-milestone-math::after { pointer-events: none; }
+.record-placeholder { min-height: calc(100vh - 201px); padding-block: 54px 80px; }
+.record-placeholder h1 { margin: 0; color: var(--navy-deep); font-size: clamp(2.75rem, 5vw, 4rem); letter-spacing: -0.055em; }
 @media (max-width: 620px) {
   .site-header-with-nav { flex-wrap: wrap; justify-content: flex-start; gap: 0; padding-top: 16px; }
-  .site-header-with-nav .wordmark { width: 100%; margin-bottom: 8px; }
-  .site-page-nav { width: 100%; gap: 24px; }
-  .site-page-nav a { min-height: 46px; padding-block: 10px; font-size: 0.875rem; }
+  .site-header-with-nav .wordmark { width: 100%; margin-bottom: 12px; }
+  .site-page-nav { display: grid; grid-template-columns: minmax(0,0.85fr) minmax(0,1.15fr); width: 100%; gap: 4px; margin-bottom: 12px; }
+  .site-page-nav a { min-height: 44px; padding: 9px 10px; font-size: 0.875rem; }
   .academic-page .academic-records { padding-top: 18px; }
+  .profile-milestone-link,
+  .profile-milestone:nth-child(even) .profile-milestone-link { padding: 16px 24px; }
+  .record-placeholder { min-height: calc(100vh - 257px); padding-block: 36px 64px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
