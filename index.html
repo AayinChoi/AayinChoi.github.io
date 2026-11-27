@@ -22,7 +22,6 @@
         <p class="eyebrow">Aerospace Engineering · Aeronautics</p>
         <h2 class="portfolio-panel-name" id="personal-intro-title"><span>Aayin</span> <span>Choi</span></h2>
         <div class="personal-school">
-          <img src="erau-eagle.svg" alt="" width="40" height="45">
           <p class="personal-affiliation">Embry-Riddle Aeronautical University <span>Daytona Beach, Florida</span></p>
         </div>
       </div>
@@ -139,11 +138,18 @@
           <h2 id="academic-profile-title">Academic <span>Profile</span></h2>
           <p class="profile-heading-caption">Achievements, honors &amp; membership</p>
         </div>
-
+        <nav class="profile-directory" aria-labelledby="academic-directory-title">
+          <h3 class="project-directory-title" id="academic-directory-title">Explore records</h3>
+          <ul class="record-directory">
+            <li><a href="#calculus-record"><span class="record-directory-label">Course achievement</span><span>Calculus I</span></a></li>
+            <li><a href="#catia-record"><span class="record-directory-label">Project achievement</span><span>CATIA V5 · EGR 120</span></a></li>
+            <li><a href="#academic-honors"><span class="record-directory-label">Recognition</span><span>Honors &amp; membership</span></a></li>
+          </ul>
+        </nav>
       </header>
 
       <ol class="profile-records" aria-label="Academic achievements, honors and membership">
-        <li class="profile-milestone profile-milestone-math">
+        <li class="profile-milestone profile-milestone-math" id="calculus-record">
           <div class="profile-milestone-title">
             <h3>Calculus I</h3>
             <span class="profile-standing" aria-label="Rank number one">#1</span>
@@ -153,7 +159,7 @@
             <p class="profile-milestone-context">Highest overall course grade across all MA 241 sections taught by the instructor.</p>
           </div>
         </li>
-        <li class="profile-milestone profile-milestone-catia">
+        <li class="profile-milestone profile-milestone-catia" id="catia-record">
           <div class="profile-milestone-title">
             <h3>CATIA V5 · EGR 120</h3>
             <span class="profile-standing" aria-label="Joint rank number one">#1</span>
@@ -167,7 +173,7 @@
             <span>10 parts · 2 subassemblies · 44 drawing sheets</span>
           </p>
         </li>
-        <li class="profile-record">
+        <li class="profile-record" id="academic-honors">
           <h3>Dean’s List</h3>
           <p>ERAU · College of Engineering</p>
           <p class="profile-record-date">Spring 2026</p>
