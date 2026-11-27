@@ -2597,7 +2597,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .personal-summary .personal-links { gap: 12px 18px; }
 }
 
-/* A framed recognition archive that can grow by year through graduation. */
+/* A framed recognition archive that expands as records are added. */
 .profile-roadmap {
   position: relative;
   padding: 30px clamp(24px, 4.5vw, 54px) 32px;
@@ -2611,16 +2611,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 .roadmap-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .roadmap-kicker { margin: 0 0 5px; color: var(--muted); font-size: 0.875rem; font-weight: 650; }
 .roadmap-heading h3 { margin: 0; color: var(--navy-deep); font-size: 1.6rem; line-height: 1.2; letter-spacing: -0.035em; }
-.roadmap-span { display: grid; gap: 2px; margin: 0; text-align: right; }
-.roadmap-span span { color: var(--muted); font-size: 0.875rem; }
-.roadmap-span strong { color: var(--navy-soft); font-size: 1.125rem; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: 0.025em; }
-.roadmap-years { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 26px; }
-.roadmap-year { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; min-width: 0; padding: 10px 0 0; border-top: 2px solid #d8dbe1; color: #737b89; font-size: 1.125rem; font-weight: 600; font-variant-numeric: tabular-nums; }
-.roadmap-year-recorded { border-color: var(--navy-soft); color: var(--navy-deep); }
-.roadmap-year span { color: var(--muted); font-size: 0.75rem; font-weight: 450; }
-.roadmap-year-group { margin-top: 26px; }
-.roadmap-group-title { display: flex; align-items: center; gap: 12px; margin: 0 0 20px; color: var(--navy-deep); font-size: 1rem; font-weight: 750; font-variant-numeric: tabular-nums; }
-.roadmap-group-title span { color: var(--muted); font-size: 0.875rem; font-weight: 450; }
+.roadmap-records { margin-top: 26px; }
 .profile-roadmap .profile-roadmap-list { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px 24px; }
 .profile-roadmap .profile-record { grid-column: auto; gap: 7px; min-height: 148px; padding: 22px 0 0; margin: 0; }
 .profile-roadmap .profile-record::before { top: -4px; left: 0; width: 9px; height: 9px; border-color: #f9f9f8; }
@@ -2640,13 +2631,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .profile-roadmap { padding: 24px 24px 26px; border-radius: 16px; }
   .roadmap-heading { align-items: flex-start; gap: 16px; }
   .roadmap-heading h3 { font-size: 1.3rem; }
-  .roadmap-span span { display: none; }
-  .roadmap-span strong { white-space: nowrap; font-size: 0.875rem; }
-  .roadmap-years { gap: 8px; margin-top: 22px; }
-  .roadmap-year { display: block; font-size: 1rem; }
-  .roadmap-year span { display: block; margin-top: 2px; }
-  .roadmap-year-group { margin-top: 24px; }
-  .roadmap-group-title { margin-bottom: 18px; }
+  .roadmap-records { margin-top: 24px; }
   .profile-roadmap .profile-roadmap-list { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .profile-roadmap .profile-record { min-height: 0; padding: 0 0 4px 26px; gap: 5px; }
   .profile-roadmap .profile-record::before { top: 6px; left: -4px; }
