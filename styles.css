@@ -2144,6 +2144,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-catia .profile-milestone-score {
+  color: #8a6d24;
   text-shadow: 0 1px 0 rgba(255,255,255,0.8);
 }
 
