@@ -1939,7 +1939,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   text-transform: uppercase;
 }
 
-.profile-heading h2 {
+.profile-heading h1 {
   display: grid;
   margin: 0;
   font-size: clamp(3rem, 5.7vw, 4.75rem);
@@ -1947,7 +1947,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   line-height: 0.98;
   letter-spacing: -0.055em;
 }
-.profile-heading h2 span { color: var(--navy-soft); }
+.profile-heading h1 span { color: var(--navy-soft); }
 .profile-heading-caption {
   margin: 24px 0 0;
   color: var(--muted);
@@ -2264,7 +2264,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   }
   .profile-heading::before { left: 24px; }
   .profile-heading-kicker { margin-bottom: 20px; font-size: 0.875rem; letter-spacing: 0.025em; }
-  .profile-heading h2 { font-size: clamp(3rem, 14vw, 3.5rem); }
+  .profile-heading h1 { font-size: clamp(3rem, 14vw, 3.5rem); }
   .profile-heading-caption { margin-top: 20px; }
   .profile-records {
     grid-template-columns: minmax(0, 1fr);
@@ -2668,6 +2668,35 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .profile-roadmap .profile-record:nth-child(4n)::after { display: block; top: 10px; left: 0; right: auto; bottom: -24px; width: 1px; height: auto; background: #d1d4dd; }
   .profile-roadmap .profile-record:last-child::after { display: none; }
   .profile-roadmap .profile-record .profile-record-date { margin-top: 3px; }
+}
+
+/* Shared page navigation: portfolio and academic records. */
+.site-header-with-nav { gap: 24px; }
+.site-page-nav { display: flex; align-self: stretch; gap: 28px; }
+.site-page-nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.site-page-nav a::after { content: ""; position: absolute; right: 0; bottom: -1px; left: 0; height: 3px; background: transparent; }
+.site-page-nav a[aria-current] { color: var(--navy-deep); }
+.site-page-nav a[aria-current]::after { background: var(--navy); }
+.site-page-nav a:hover { color: var(--navy); }
+.site-page-nav a:focus-visible { outline: 3px solid var(--navy-soft); outline-offset: 4px; }
+.academic-page .academic-records { padding-top: 30px; }
+@media (max-width: 620px) {
+  .site-header-with-nav { flex-wrap: wrap; justify-content: flex-start; gap: 0; padding-top: 16px; }
+  .site-header-with-nav .wordmark { width: 100%; margin-bottom: 8px; }
+  .site-page-nav { width: 100%; gap: 24px; }
+  .site-page-nav a { min-height: 46px; padding-block: 10px; font-size: 0.875rem; }
+  .academic-page .academic-records { padding-top: 18px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
