@@ -2092,8 +2092,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-catia,
-.profile-milestone-lvp,
-.profile-milestone-project {
+.profile-milestone-lvp {
   padding-left: 44px;
   background:
     linear-gradient(135deg, rgba(255,255,255,0.92), transparent 65%),
@@ -2103,8 +2102,13 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-project {
-  border-color: #557b9b;
-  box-shadow: 0 8px 24px rgba(36,75,105,0.1), inset 0 0 0 1px rgba(85,123,155,0.22), inset 0 1px 0 #fff;
+  padding-left: 44px;
+  border-color: #a49a8b;
+  background:
+    linear-gradient(135deg, #fff, rgba(255,255,255,0) 70%),
+    linear-gradient(115deg, #fffefa, #f3efe7);
+  box-shadow: 0 8px 24px rgba(73,62,46,0.07), inset 0 0 0 1px rgba(164,154,139,0.17), inset 0 1px 0 #fff;
+  color: #36322c;
 }
 
 .profile-milestone-project::before {
@@ -2114,7 +2118,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   left: 20px;
   width: calc(100% - 40px);
   height: 3px;
-  background: linear-gradient(90deg, #315a7d, #82a6c0 55%, rgba(85,123,155,0.18));
+  background: linear-gradient(90deg, #7b7163, #bfb3a1 55%, rgba(164,154,139,0.18));
   pointer-events: none;
 }
 
@@ -2147,6 +2151,10 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   pointer-events: none;
 }
 
+.profile-milestone-project::after {
+  background: linear-gradient(140deg, rgba(139,121,95,0.08), rgba(139,121,95,0));
+}
+
 .profile-milestone-catia > *,
 .profile-milestone-lvp > *,
 .profile-milestone-project > * {
@@ -2176,10 +2184,17 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 .profile-milestone-catia .profile-milestone-score span,
 .profile-milestone-catia .profile-milestone-context,
 .profile-milestone-lvp .profile-milestone-score span,
-.profile-milestone-lvp .profile-milestone-context,
+.profile-milestone-lvp .profile-milestone-context {
+  color: #4b6172;
+}
+
 .profile-milestone-project .profile-milestone-score span,
 .profile-milestone-project .profile-milestone-context {
-  color: #4b6172;
+  color: #686155;
+}
+
+.profile-milestone-project .profile-project-output {
+  border-top-color: rgba(123,113,99,0.22);
 }
 
 .profile-project-output {
