@@ -2576,9 +2576,12 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 /* First-screen technical profile, grounded in the current resume. */
 .personal-intro { padding-block: 32px; }
 .personal-degree { margin: 12px 0 0; color: var(--navy-deep); font-size: 0.9375rem; }
-.personal-facts { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; }
-.personal-facts span { padding: 5px 10px; border: 1px solid rgba(25,28,62,0.15); border-radius: 5px; color: #555c68; font-size: 0.875rem; line-height: 1.5; }
-.personal-facts .personal-citizenship { border-color: var(--navy-deep); background: var(--navy-deep); color: #fff; font-weight: 650; }
+.personal-degree span { color: var(--muted); white-space: nowrap; }
+.personal-facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 12px 26px; margin: 18px 0 0; }
+.personal-facts > div { min-width: 0; }
+.personal-facts dt { margin: 0 0 3px; color: var(--muted); font-size: 0.875rem; line-height: 1.5; }
+.personal-facts dd { margin: 0; color: #4d515d; font-size: 0.9375rem; line-height: 1.5; }
+.personal-facts .personal-citizenship { color: var(--navy-deep); font-size: 1rem; font-weight: 750; }
 .personal-summary h3.personal-summary-label { font-size: 0.875rem; line-height: 1.5; }
 .personal-capabilities { display: grid; gap: 18px; margin: 16px 0 0; }
 .personal-capabilities dt { margin: 0 0 7px; color: var(--muted); font-size: 0.875rem; font-weight: 650; }
@@ -2593,7 +2596,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 @media (max-width: 620px) {
   .personal-intro { padding-block: 26px; }
   .personal-degree { margin-top: 10px; }
-  .personal-facts { gap: 8px; margin-top: 14px; }
+  .personal-facts { gap: 12px 18px; margin-top: 16px; }
   .personal-summary .personal-links { gap: 12px 18px; }
 }
 
