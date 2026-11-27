@@ -2092,7 +2092,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-catia,
-.profile-milestone-lvp {
+.profile-milestone-lvp,
+.profile-milestone-project {
   padding-left: 44px;
   background:
     linear-gradient(135deg, rgba(255,255,255,0.92), transparent 65%),
@@ -2117,7 +2118,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-catia::after,
-.profile-milestone-lvp::after {
+.profile-milestone-lvp::after,
+.profile-milestone-project::after {
   content: "";
   position: absolute;
   right: -28px;
@@ -2130,7 +2132,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-catia > *,
-.profile-milestone-lvp > * {
+.profile-milestone-lvp > *,
+.profile-milestone-project > * {
   position: relative;
   z-index: 1;
 }
@@ -2157,7 +2160,9 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 .profile-milestone-catia .profile-milestone-score span,
 .profile-milestone-catia .profile-milestone-context,
 .profile-milestone-lvp .profile-milestone-score span,
-.profile-milestone-lvp .profile-milestone-context {
+.profile-milestone-lvp .profile-milestone-context,
+.profile-milestone-project .profile-milestone-score span,
+.profile-milestone-project .profile-milestone-context {
   color: #4b6172;
 }
 
