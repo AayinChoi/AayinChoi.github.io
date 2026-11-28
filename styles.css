@@ -2975,6 +2975,10 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 .profile-milestone-course .profile-milestone-context { color: #e0e1eb; }
 .profile-milestone-course:not(.profile-milestone-math) .profile-milestone-context strong { color: #b8e4c8; font-weight: 650; }
+.profile-course-projects { display: grid; gap: 7px; }
+.profile-course-project { margin: 0; font-size: 0.875rem; line-height: 1.35; }
+.profile-course-project-result { display: block; color: #b8e4c8; font-weight: 650; }
+.profile-course-project-scope { display: block; color: #d9dce7; font-weight: 400; }
 .profile-records > .profile-course-card .profile-course-meta {
   display: flex;
   align-items: baseline;
