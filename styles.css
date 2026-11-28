@@ -2930,7 +2930,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   min-height: 240px;
 }
 .profile-records > .profile-milestone .profile-milestone-title { min-height: 2.6rem; }
-.profile-records > .profile-project-card .profile-milestone-title { margin-top: calc(1.225rem + 12px); }
+.profile-records > .profile-project-card .profile-milestone-title { margin-top: 12px; }
 .profile-records > .profile-milestone .profile-milestone-main { margin-bottom: 12px; }
 .profile-records > .profile-milestone .profile-course-topics,
 .profile-records > .profile-milestone .profile-project-output { margin-top: auto; }
