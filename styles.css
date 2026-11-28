@@ -2932,7 +2932,6 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 .profile-records > .profile-project-card .profile-milestone-title { margin-top: 0; }
 .profile-records > .profile-milestone .profile-milestone-main { margin-bottom: 8px; }
-.profile-records > .profile-milestone .profile-course-topics,
 .profile-records > .profile-milestone .profile-project-output { margin-top: auto; }
 .profile-record-columns {
   display: grid;
@@ -2975,28 +2974,19 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   pointer-events: none;
 }
 .profile-milestone-course .profile-milestone-context { color: #e0e1eb; }
-.profile-course-heading { min-width: 0; }
-.profile-course-meta {
+.profile-records > .profile-course-card .profile-course-meta {
   display: flex;
   align-items: baseline;
-  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 0;
-  margin: 3px 0 0;
+  margin: auto 0 0;
+  padding-top: 12px;
   color: #c8ccdc;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.4;
 }
 .profile-course-meta > span + span::before { content: "·"; margin-inline: 8px; }
-.profile-course-topics {
-  margin: 12px 0 0;
-  padding-top: 8px;
-  border-top: 1px solid rgba(224,225,235,0.2);
-  color: #e0e1eb;
-  font-size: 0.875rem;
-  line-height: 1.45;
-}
 .profile-grade {
   position: relative;
   display: grid;
@@ -3035,6 +3025,13 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .profile-card-kind { display: block; margin: 0 0 8px; color: inherit; font-size: 0.875rem; font-weight: 500; line-height: 1.4; opacity: 0.8; }
   .course-detail { padding-block: 36px; }
 }
+
+.course-detail-meta { margin: 16px 0 0; color: var(--muted); font-size: 1rem; line-height: 1.5; }
+.course-overview { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+.course-overview h2 { margin: 0 0 14px; color: var(--navy-deep); font-size: 1.25rem; line-height: 1.4; }
+.course-overview-name { max-width: 70ch; margin: 0 0 12px; color: var(--navy-deep); font-size: 1rem; font-weight: 650; line-height: 1.6; }
+.course-overview-name > span { display: block; color: var(--muted); font-size: 0.875rem; font-weight: 400; }
+.course-overview-description { max-width: 70ch; margin: 0; color: #4d515d; font-size: 1rem; line-height: 1.8; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
