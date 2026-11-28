@@ -2923,6 +2923,15 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 /* Course results and projects stay paired by subject. */
+.profile-records { grid-template-rows: repeat(3, minmax(0, 1fr)) auto; }
+.profile-records > .profile-milestone .profile-milestone-link {
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+}
+.profile-records > .profile-milestone .profile-milestone-main { margin-bottom: 12px; }
+.profile-records > .profile-milestone .profile-course-topics,
+.profile-records > .profile-milestone .profile-project-output { margin-top: auto; }
 .profile-record-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3013,6 +3022,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 .course-detail .eyebrow { margin: 0 0 14px; }
 .course-detail h1 { margin: 0; color: var(--navy-deep); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; letter-spacing: -0.05em; }
 @media (max-width: 620px) {
+  .profile-records { grid-template-rows: repeat(5, minmax(0, 1fr)) auto; }
   .profile-record-columns { display: none; }
   .profile-records > .profile-course-card,
   .profile-records > .profile-project-card { grid-column: auto; }
