@@ -2927,11 +2927,11 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 .profile-records > .profile-milestone .profile-milestone-link {
   display: flex;
   flex-direction: column;
-  min-height: 240px;
+  min-height: 204px;
+  padding-block: 14px;
 }
-.profile-records > .profile-milestone .profile-milestone-title { min-height: 2.6rem; }
-.profile-records > .profile-project-card .profile-milestone-title { margin-top: 12px; }
-.profile-records > .profile-milestone .profile-milestone-main { margin-bottom: 12px; }
+.profile-records > .profile-project-card .profile-milestone-title { margin-top: 0; }
+.profile-records > .profile-milestone .profile-milestone-main { margin-bottom: 8px; }
 .profile-records > .profile-milestone .profile-course-topics,
 .profile-records > .profile-milestone .profile-project-output { margin-top: auto; }
 .profile-record-columns {
@@ -2975,21 +2975,23 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   pointer-events: none;
 }
 .profile-milestone-course .profile-milestone-context { color: #e0e1eb; }
+.profile-course-heading { min-width: 0; }
 .profile-course-meta {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 6px 16px;
-  margin: 0 0 12px;
+  gap: 0;
+  margin: 3px 0 0;
   color: #c8ccdc;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.4;
 }
+.profile-course-meta > span + span::before { content: "·"; margin-inline: 8px; }
 .profile-course-topics {
   margin: 12px 0 0;
-  padding-top: 10px;
+  padding-top: 8px;
   border-top: 1px solid rgba(224,225,235,0.2);
   color: #e0e1eb;
   font-size: 0.875rem;
@@ -3029,7 +3031,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .profile-records > .profile-course-card,
   .profile-records > .profile-project-card { grid-column: auto; }
   .profile-records > .profile-course-card .profile-milestone-link,
-  .profile-records > .profile-project-card .profile-milestone-link { padding: 16px 24px; }
+  .profile-records > .profile-project-card .profile-milestone-link { padding: 14px 24px; }
   .profile-card-kind { display: block; margin: 0 0 8px; color: inherit; font-size: 0.875rem; font-weight: 500; line-height: 1.4; opacity: 0.8; }
   .course-detail { padding-block: 36px; }
 }
