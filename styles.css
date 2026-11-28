@@ -2922,6 +2922,58 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   .profile-milestone:nth-child(even) .profile-milestone-link { padding: 16px 24px; }
 }
 
+/* Course results and projects stay paired by subject. */
+.profile-record-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 650;
+}
+.profile-record-columns > span:first-child { padding-left: clamp(32px, 4.5vw, 54px); }
+.profile-record-columns > span:last-child { padding-left: 44px; }
+.profile-records > .profile-course-card { grid-column: 1 / 7; }
+.profile-records > .profile-project-card { grid-column: 7 / -1; }
+.profile-records > .profile-milestone.profile-course-card,
+.profile-records > .profile-milestone.profile-project-card { padding: 0; }
+.profile-records > .profile-course-card .profile-milestone-link { padding-left: clamp(32px, 4.5vw, 54px); }
+.profile-records > .profile-project-card .profile-milestone-link { padding-left: 44px; }
+.profile-card-kind { display: none; }
+.profile-milestone-course {
+  border-color: #aebfb3;
+  background: linear-gradient(135deg, #fff, rgba(255,255,255,0) 70%), linear-gradient(115deg, #fcfdfb, #f1f5ee);
+  box-shadow: 0 8px 24px rgba(52,77,58,0.045), inset 0 1px 0 #fff;
+  color: #34463a;
+}
+.profile-milestone-course .profile-milestone-context { color: #637066; }
+.profile-grade {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 34px;
+  padding: 2px 8px;
+  border: 1px solid #95b49e;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #f2f8ef, #dcebdc);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.75);
+  color: #2f6547;
+  font-size: 1.45rem;
+}
+.course-detail { min-height: calc(100vh - 140px); padding-block: 56px; }
+.course-detail .eyebrow { margin: 0 0 14px; }
+.course-detail h1 { margin: 0; color: var(--navy-deep); font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; letter-spacing: -0.05em; }
+@media (max-width: 620px) {
+  .profile-record-columns { display: none; }
+  .profile-records > .profile-course-card,
+  .profile-records > .profile-project-card { grid-column: auto; }
+  .profile-records > .profile-course-card .profile-milestone-link,
+  .profile-records > .profile-project-card .profile-milestone-link { padding: 16px 24px; }
+  .profile-card-kind { display: block; margin: 0 0 8px; color: inherit; font-size: 0.875rem; font-weight: 500; line-height: 1.4; opacity: 0.8; }
+  .course-detail { padding-block: 36px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
