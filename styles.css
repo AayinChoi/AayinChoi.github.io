@@ -2113,9 +2113,9 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   border-color: #b49242;
   background:
     linear-gradient(135deg, rgba(255,255,255,0.94), transparent 65%),
-    linear-gradient(115deg, #faf4e1, #ead9a5);
-  box-shadow: 0 8px 24px rgba(112,88,35,0.08), inset 0 0 0 1px rgba(180,146,66,0.24), inset 0 1px 0 #fff;
-  color: #584727;
+    linear-gradient(115deg, #fefdfa, #f4efdf);
+  box-shadow: 0 8px 24px rgba(112,88,35,0.045), inset 0 0 0 1px rgba(180,146,66,0.24), inset 0 1px 0 #fff;
+  color: #484538;
 }
 
 .profile-milestone-catia::before {
@@ -2143,7 +2143,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 }
 
 .profile-milestone-catia::after {
-  background: linear-gradient(140deg, rgba(180,142,54,0.15), rgba(180,142,54,0));
+  background: linear-gradient(140deg, rgba(180,142,54,0.065), rgba(180,142,54,0));
 }
 
 .profile-milestone-project::after {
@@ -2179,11 +2179,11 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 
 .profile-milestone-catia .profile-milestone-score span,
 .profile-milestone-catia .profile-milestone-context {
-  color: #6b5b3c;
+  color: #696455;
 }
 
 .profile-milestone-catia .profile-project-output {
-  border-top-color: rgba(138,109,36,0.22);
+  border-top-color: rgba(138,109,36,0.16);
 }
 
 .profile-milestone-lvp .profile-milestone-score span,
@@ -2585,7 +2585,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 
 /* Scope emphasis; gold decoration is reserved for first-place achievements. */
 .profile-milestone-math .profile-milestone-context strong { color: #ead28b; font-weight: 750; }
-.profile-milestone-catia .profile-milestone-context strong { color: #5c4724; font-weight: 700; }
+.profile-milestone-catia .profile-milestone-context strong { color: #5c5340; font-weight: 700; }
 .profile-milestone-lvp .profile-milestone-context strong { color: #244b69; font-weight: 700; }
 /* Chronological highlights wrap two per row; smaller records keep their roadmap. */
 .profile-records > .profile-milestone {
