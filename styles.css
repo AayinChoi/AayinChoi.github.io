@@ -2974,6 +2974,7 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   pointer-events: none;
 }
 .profile-milestone-course .profile-milestone-context { color: #e0e1eb; }
+.profile-milestone-course:not(.profile-milestone-math) .profile-milestone-context strong { color: #b8e4c8; font-weight: 650; }
 .profile-records > .profile-course-card .profile-course-meta {
   display: flex;
   align-items: baseline;
@@ -3029,8 +3030,6 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
 .course-detail-meta { margin: 16px 0 0; color: var(--muted); font-size: 1rem; line-height: 1.5; }
 .course-overview { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
 .course-overview h2 { margin: 0 0 14px; color: var(--navy-deep); font-size: 1.25rem; line-height: 1.4; }
-.course-overview-name { max-width: 70ch; margin: 0 0 12px; color: var(--navy-deep); font-size: 1rem; font-weight: 650; line-height: 1.6; }
-.course-overview-name > span { display: block; color: var(--muted); font-size: 0.875rem; font-weight: 400; }
 .course-overview-description { max-width: 70ch; margin: 0; color: #4d515d; font-size: 1rem; line-height: 1.8; }
 
 @media (prefers-reduced-motion: reduce) {
