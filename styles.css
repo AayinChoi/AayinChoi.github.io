@@ -2929,6 +2929,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   flex-direction: column;
   min-height: 240px;
 }
+.profile-records > .profile-milestone .profile-milestone-title { min-height: 2.6rem; }
+.profile-records > .profile-project-card .profile-milestone-title { margin-top: calc(1.225rem + 12px); }
 .profile-records > .profile-milestone .profile-milestone-main { margin-bottom: 12px; }
 .profile-records > .profile-milestone .profile-course-topics,
 .profile-records > .profile-milestone .profile-project-output { margin-top: auto; }
@@ -2957,8 +2959,8 @@ figcaption { margin-top: 13px; color: var(--muted); font-size: 0.86rem; }
   color: var(--white);
 }
 .profile-milestone-course:not(.profile-milestone-math) {
-  border-color: #777d99;
-  box-shadow: 0 10px 26px rgba(25,28,62,0.12), inset 0 1px 0 rgba(227,231,243,0.16);
+  border-color: #99d6af;
+  box-shadow: 0 0 0 1px rgba(112,181,141,0.7), 0 10px 26px rgba(25,28,62,0.12), inset 0 0 0 1px rgba(153,214,175,0.18), inset 0 1px 0 rgba(227,231,243,0.16);
 }
 .profile-milestone-course:not(.profile-milestone-math)::before {
   content: "";
